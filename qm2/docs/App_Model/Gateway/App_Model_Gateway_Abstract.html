@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class App_Model_Gateway_Abstract</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class App_Model_Gateway_Abstract</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Abstrakte Gateway Klasse. Die Gateway Klasse fungiert als &quot;Vermittler&quot; zwischen den Value Objekten und  den ResultSet Objekten. In den konkreten Gateway Klassen werden Methoden für die spezifischeren Abfragen  erstelllt.</p>
+<p class="description"><p>TODO: ACL integration!</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> kastners</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_App---Model---Gateway---Abstract.php.html">/App/Model/Gateway/Abstract.php</a> (line <span class="field">16</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../../App_Model/Gateway/App_Model_Gateway_TreeAbstract.html">App_Model_Gateway_TreeAbstract</a></td>
+					<td>
+											Abstrakte Klasse, die von konkreten Gateway Klassen erweitert wird, falls das Gateway mit einer Tabelle  verknüpft ist, die einen Baum darstellt
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../../App_Model/Gateway/App_Model_Gateway_OrderedList.html">App_Model_Gateway_OrderedList</a></td>
+					<td>
+											Abstrakte Klasse, die von konkreten Gateway Klassen erweitert wird, falls das Gateway mit einer Tabelle  verknüpft ist, die einen Baum darstellt
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																<div class="var-title">
+					<span class="var-type"><a href="../../App_Acl/App_Acl.html">App_Acl</a></span>
+					<a href="#$_acl" title="details" class="var-name">$_acl</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"></span>
+					<a href="#$_identity" title="details" class="var-name">$_identity</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">int</span>
+					<a href="#$_page" title="details" class="var-name">$_page</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_pageparam" title="details" class="var-name">$_pageparam</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Zend_Paginator</span>
+					<a href="#$_paginator" title="details" class="var-name">$_paginator</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">int</span>
+					<a href="#$_perpage" title="details" class="var-name">$_perpage</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_resource" title="details" class="var-name">$_resource</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_resultClass" title="details" class="var-name">$_resultClass</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_tableClass" title="details" class="var-name">$_tableClass</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_tables" title="details" class="var-name">$_tables</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">bool</span>
+					<a href="#$_usePaginator" title="details" class="var-name">$_usePaginator</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_valueClass" title="details" class="var-name">$_valueClass</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#changeActiveState" title="details" class="method-name">changeActiveState</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#checkAcl" title="details" class="method-name">checkAcl</a>
+											(<span class="var-type">$privilege</span>&nbsp;<span class="var-name">$privilege</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$resource</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Resultset/App_Model_Resultset_Abstract.html">App_Model_Resultset_Abstract</a></span>
+										<a href="#createResultset" title="details" class="method-name">createResultset</a>
+											(<span class="var-type">stdObject|array</span>&nbsp;<span class="var-name">$results</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">anzahl</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type">int|string</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#fetch" title="details" class="method-name">fetch</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Resultset/App_Model_Resultset_Abstract.html">App_Model_Resultset_Abstract</a></span>
+										<a href="#fetchAll" title="details" class="method-name">fetchAll</a>
+											([<span class="var-type">string|array|Zend_Db_Table_Select</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>], [<span class="var-type">string|array</span>&nbsp;<span class="var-name">$order</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$perpage</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>], <span class="var-type">int</span>&nbsp;<span class="var-name">$count</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#fetchWhere" title="details" class="method-name">fetchWhere</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Acl/App_Acl.html">App_Acl</a></span>
+										<a href="#getAcl" title="details" class="method-name">getAcl</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getDefaultClass" title="details" class="method-name">getDefaultClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getIdentity" title="details" class="method-name">getIdentity</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#getNumRows" title="details" class="method-name">getNumRows</a>
+											([<span class="var-type">string|array</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#getPage" title="details" class="method-name">getPage</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Paginator</span>
+										<a href="#getPaginator" title="details" class="method-name">getPaginator</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getResource" title="details" class="method-name">getResource</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getResultClass" title="details" class="method-name">getResultClass</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getTable" title="details" class="method-name">getTable</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$tableClass</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#getTableName" title="details" class="method-name">getTableName</a>
+											([<span class="var-type">String|Zend_Db_Table_Abstract</span>&nbsp;<span class="var-name">$tableClass</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#getValue" title="details" class="method-name">getValue</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>], [<span class="var-type">$valueClass</span>&nbsp;<span class="var-name">$valueClass</span> = <span class="var-default">null</span>], <span class="var-type">int|string|stdObject|array</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getValueClass" title="details" class="method-name">getValueClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setAcl" title="details" class="method-name">setAcl</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$acl</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setIdentity" title="details" class="method-name">setIdentity</a>
+											(<span class="var-type">$identity</span>&nbsp;<span class="var-name">$identity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setOptions" title="details" class="method-name">setOptions</a>
+											(<span class="var-type">array|Zend_Config</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setPage" title="details" class="method-name">setPage</a>
+											([<span class="var-type">int</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setPaginator" title="details" class="method-name">setPaginator</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$perpage</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$offset</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setResource" title="details" class="method-name">setResource</a>
+											(<span class="var-type">$resource</span>&nbsp;<span class="var-name">$resource</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setResultClass" title="details" class="method-name">setResultClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$resultClass</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setUsePaginator" title="details" class="method-name">setUsePaginator</a>
+											(<span class="var-type">bool</span>&nbsp;<span class="var-name">$flag</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setValueClass" title="details" class="method-name">setValueClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$valueClass</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_acl" id="$_acl"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../../App_Acl/App_Acl.html">App_Acl</a></span>
+			<span class="var-name">$_acl</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">66</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ACL Objekt, das für die Rechteprüfungen verwendet wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_identity" id="$_identity"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"></span>
+			<span class="var-name">$_identity</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">73</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Identität des aktuell eingeloggten Benutzers</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_page" id="$_page"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$_page</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">54</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speichert die aktuelle Seite. Wird für die Seitenweise Anzeige von Daten benötigt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_pageparam" id="$_pageparam"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_pageparam</span>
+			 = <span class="var-default"> 'page'</span>			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Der get Parameter, in dem die Seite gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_paginator" id="$_paginator"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Zend_Paginator</span>
+			<span class="var-name">$_paginator</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">92</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speichert das Zend_Paginator Objekt, das in fetchAll() erzeugt wurde. Es wird jeweils ein Paginator</p>
+<p class="description"><p>Objekt gespeichert. Wird die Methode mehrmals aufgerufen wird das vorher gespeicherte Objekt überschrieben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_perpage" id="$_perpage"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$_perpage</span>
+			 = <span class="var-default"> 10</span>			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Definiert den Standardwert an Datensätzen, die pro Seite angezeigt werden. Kann sowohl in den konkreten</p>
+<p class="description"><p>Gateway Klassen als auch beim Auslesen der Datensätze geändert bzw angegeben werden</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_resource" id="$_resource"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_resource</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">79</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Standard Resource, die mit dem Gateway verknüpft ist. Muss in den erbenden Gateways gesetzt werden</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_resultClass" id="$_resultClass"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_resultClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Klasse, die standardmäßig für die im Gateway erzeugten ResultSets erzeugt wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tableClass" id="$_tableClass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_tableClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Klasse, von der standardmäßig die Tabellen Objekte abgeleitet werden.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tables" id="$_tables"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_tables</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">85</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speicherung verschiedener Tabellen Objekte</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_usePaginator" id="$_usePaginator"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$_usePaginator</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bestimmt ob für das Auslesen bzw das Erstellen der Datensätze ein Paginator verwendet werden soll,</p>
+<p class="description"><p>also ob die Datensätze Seitenweise oder alle auf einmal angezeigt werden sollen</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_valueClass" id="$_valueClass"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_valueClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">22</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Klasse, die Standardmäßig für die im Gateway erzeugten Value Objekte verwendet wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Konstruktor. Setzt die Optionen, falls ein Array mit optionen übergeben wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodchangeActiveState" id="changeActiveState"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">changeActiveState</span> (line <span class="line-number">248</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ändert den Aktivierungsstatus des Datensatzes mit der übergebenen ID</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			changeActiveState
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckAcl" id="checkAcl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">checkAcl</span> (line <span class="line-number">359</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Überprüft, ob der aktuelle Benutzer die</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkAcl
+		</span>
+					(<span class="var-type">$privilege</span>&nbsp;<span class="var-name">$privilege</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$resource</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$privilege</span>
+				<span class="var-name">$privilege</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$resource</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateResultset" id="createResultset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createResultset</span> (line <span class="line-number">266</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erzeugt aus einem array ein gültiges Resultset</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Resultset/App_Model_Resultset_Abstract.html">App_Model_Resultset_Abstract</a></span>
+		<span class="method-name">
+			createResultset
+		</span>
+					(<span class="var-type">stdObject|array</span>&nbsp;<span class="var-name">$results</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">stdObject|array</span>
+				<span class="var-name">$results</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete</span> (line <span class="line-number">195</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Löscht den Datensatz mit der angegebenen ID. Alternativ zur ID kann auch ein String mit einem WHERE Statement</p>
+<p class="description"><p>übergeben werden</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> der gelöschten Datensätze</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">anzahl</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type">int|string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int|string</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../App_Model/Gateway/App_Model_Gateway_OrderedList.html#methoddelete">App_Model_Gateway_OrderedList::delete()</a>
+								: Löscht den Datensatz und passt die Positionen der restlichen Datensätze an
+							</li>
+				</ul>
+	</div>
+<a name="methodfetch" id="fetch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fetch</span> (line <span class="line-number">184</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erstellt ein Value Objekt anhand der ID. Hierfür wird zuerst ein leeres Value Objekt erzeugt.</p>
+<p class="description"><p>Über das im Value Objekt spezifizierte Tabellen Objekt wird der zur ID gehörende Datensatz ausgelesen  und im Value Objekt gespeichert.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			fetch
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfetchAll" id="fetchAll"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fetchAll</span> (line <span class="line-number">228</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Holt alle Einträge aus der Default Tabelle</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Zend_Db_Table_Abstract::fetchAll()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Resultset/App_Model_Resultset_Abstract.html">App_Model_Resultset_Abstract</a></span>
+		<span class="method-name">
+			fetchAll
+		</span>
+					([<span class="var-type">string|array|Zend_Db_Table_Select</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>], [<span class="var-type">string|array</span>&nbsp;<span class="var-name">$order</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$perpage</span> = <span class="var-default">null</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$offset</span> = <span class="var-default">null</span>], <span class="var-type">int</span>&nbsp;<span class="var-name">$count</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array|Zend_Db_Table_Select</span>
+				<span class="var-name">$where</span><span class="var-description">: Where Klausel</span>			</li>
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$order</span><span class="var-description">: Order Klausel</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$count</span><span class="var-description">: Anzahl der Datensätze, die ausgelesen werden sollen</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$offset</span><span class="var-description">: Offset für den Query</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$perpage</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../App_Model/Gateway/App_Model_Gateway_OrderedList.html#methodfetchAll">App_Model_Gateway_OrderedList::fetchAll()</a>
+								: Liest alle Einträge aus und sortiert die Einträge nach dem positionsfeld
+							</li>
+				</ul>
+	</div>
+<a name="methodfetchWhere" id="fetchWhere"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fetchWhere</span> (line <span class="line-number">214</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erstellt ein Value Objekt anhand der angegebenen WHERE Klausel aus der Default Tabelle des Value Objekts</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			fetchWhere
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: WHERE Klausel</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAcl" id="getAcl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAcl</span> (line <span class="line-number">381</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt das ACL Objekt zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Acl/App_Acl.html">App_Acl</a></span>
+		<span class="method-name">
+			getAcl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDefaultClass" id="getDefaultClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getDefaultClass</span> (line <span class="line-number">541</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Klasse für die Value Objekte zurück. Zuerst wird überprüft, ob in dem Gateway Objekt  ein Name für die Value Klasse angegeben wurde. Wenn nicht, dann wird der Name der Value Klasse über  Konventionen erstellt.</p>
+<p class="description"><p>Erstellt anhand des Namens der eigenen Klasse den Default Namen für die Klassen für die Value bzw  die Resultset Klassen. Die Konventionen hierfür sind:  Die Value Klassen im gleichen Modul im Ordner &quot;models/values&quot;. Der Name der Value Klasse ist  in der Einzahl. Die Resultset Klassen werden ebenfalls im gleichen Modul, aber im Ordner  &quot;models/resultset&quot; gesucht. Die Namen für die Resultset Klassen sind in der Mehrzahl.</p><p>Ist der Name der Gateway Klasse Beispielsweise Default_Model_Roles, dann wäre der Name für die  Value Klasse Admin_Model_Value_Role und die für das Resultset Admin_Model_Resultset_Roles</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getDefaultClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: Erlaubt sind value und resultset! Bei ungültigem wert wird eine Exception geworfen</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIdentity" id="getIdentity"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIdentity</span> (line <span class="line-number">410</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Identität des aktuell eingeloggten Benutzers zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getIdentity
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetNumRows" id="getNumRows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNumRows</span> (line <span class="line-number">291</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Anzahl der Datensätze in der Tabelle zurück. Es kann eine Optionale WHERE Klausel angegeben werden.</p>
+<p class="description"><p>Es kann auch ein array mit mehreren WHERE Klauseln angegeben werden. Diese werden mi AND zu einem boolschen Ausdruck  verknüpft</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getNumRows
+		</span>
+					([<span class="var-type">string|array</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|array</span>
+				<span class="var-name">$where</span><span class="var-description">: WHERE Klausel (opt)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPage" id="getPage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPage</span> (line <span class="line-number">596</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die aktuelle Seite zurück. Wenn die Seite noch nicht gesetzt wurde wird setPage() aufgerufen</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> aktuelle Seite</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getPage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPaginator" id="getPaginator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPaginator</span> (line <span class="line-number">609</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Paginator zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Paginator</span>
+		<span class="method-name">
+			getPaginator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResource" id="getResource"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getResource</span> (line <span class="line-number">390</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gibt den Namen der standard resource zurück, mit der das gateway verknüpft ist</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> name der resource</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getResource
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResultClass" id="getResultClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getResultClass</span> (line <span class="line-number">501</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Klasse für die erzeugten ResultSets zurück</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html#methodgetDefaultClass">App_Model_Gateway_Abstract::getDefaultClass()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getResultClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTable" id="getTable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTable</span> (line <span class="line-number">115</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liefert das angeforderte DAO. Wenn keine Parameter übergeben werden, dann wird das in der</p>
+<p class="description"><p>konkreten Model Klasse angegebene Default DAO geladen. Wird ein Objekt vom Typ Zend_Db_Table_Abstract übergeben,  dann wird dieses Objekt direkt weiterverarbeitet</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getTable
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$tableClass</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableClass</span><span class="var-description">: Name der Tabellen Klasse</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTableName" id="getTableName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTableName</span> (line <span class="line-number">171</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Tabelle zurück. Als Parameter kann ein String mit dem Namen des Zend_Db_Table_Abstract Objekts  oder direkt ein Zend_Db_Table_Abstract Objekt übergeben werden. Wird kein Parameter übergeben wird der Name der  im Gateway als Default definierten Tabelle zurückgegeben.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getTableName
+		</span>
+					([<span class="var-type">String|Zend_Db_Table_Abstract</span>&nbsp;<span class="var-name">$tableClass</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String|Zend_Db_Table_Abstract</span>
+				<span class="var-name">$tableClass</span><span class="var-description">: Zend_Db_Table_Abstract Objekt oder Name der Klasse</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetValue" id="getValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getValue</span> (line <span class="line-number">440</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erstellt ein neues (leeres) Value Objekt. Wird keine valueClass angegeben wird die in der Klasse</p>
+<p class="description"><p>definierte Standard _valueClass geladen</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			getValue
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>], [<span class="var-type">$valueClass</span>&nbsp;<span class="var-name">$valueClass</span> = <span class="var-default">null</span>], <span class="var-type">int|string|stdObject|array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int|string|stdObject|array</span>
+				<span class="var-name">$data</span><span class="var-description">: die Daten für das Value Objekt.                                    Folgende Werte sind möglich:                                           int -&gt; wird als ID des Datensatzes interpretiert                                           string -&gt; wird als WHERE Klausel interpretiert                                           stdObject -&gt; Versuch, das Objekt in einen Array umzuwandeln                                           array -&gt; Daten aus dem Array werden direkt in das Value Objekt geschrieben</span>			</li>
+					<li>
+				<span class="var-type">$valueClass</span>
+				<span class="var-name">$valueClass</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetValueClass" id="getValueClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getValueClass</span> (line <span class="line-number">473</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Klasse für die Value Objekte zurück. Zuerst wird überprüft, ob in dem Gateway Objekt  ein Name für die Value Klasse angegeben wurde. Wenn nicht, dann wird der Name der Value Klasse über  Konventionen erstellt.</p>
+<p class="description"><p>Nach der Konvention befinden sich die Value Klassen im gleichen Modul im Ordner &quot;models/values&quot;. Der  Name der Value Klasse ist in der Einzahl.  Ist der Name der Gateway Klasse Beispielsweise Default_Model_Roles, dann wäre der Name für die Value Klasse  nach Konvention Admin_Model_Value_Role</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html#methodgetDefaultClass">App_Model_Gateway_Abstract::getDefaultClass()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getValueClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAcl" id="setAcl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setAcl</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt das ACL Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setAcl
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$acl</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$acl</span>
+				<span class="var-name">$acl</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIdentity" id="setIdentity"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setIdentity</span> (line <span class="line-number">421</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die Identity des aktuell eingeloggten Benutzers</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setIdentity
+		</span>
+					(<span class="var-type">$identity</span>&nbsp;<span class="var-name">$identity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$identity</span>
+				<span class="var-name">$identity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOptions" id="setOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setOptions</span> (line <span class="line-number">321</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die Optionen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setOptions
+		</span>
+					(<span class="var-type">array|Zend_Config</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|Zend_Config</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPage" id="setPage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPage</span> (line <span class="line-number">576</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die aktuelle Seite. Wenn kein Wert übergeben wurde, dann wird der Parameter 'page' aus dem  Request Objekt ausgelesen und als aktuelle Seite gesetzt. Wenn dieser Parameter nicht vorhanden ist,  dann wird die aktuelle Seite standardmäßig auf 1 gesetzt.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setPage
+		</span>
+					([<span class="var-type">int</span>&nbsp;<span class="var-name">$page</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$page</span><span class="var-description">: Wert, auf den die Seite gesetzt werden soll OPTIONAL</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPaginator" id="setPaginator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPaginator</span> (line <span class="line-number">623</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speichert das Paginator Objekt. Diese Methode wird jeweils nach dem Aufruf von fetchAll() aufgerufen</p>
+<p class="description"><p>und speichert somit jeweils das letzte Paginator Objekt, das bei einem Aufruf von fetchAll() erzeugt  wurde</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setPaginator
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$perpage</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$offset</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$where</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$where</span><span class="var-description">: optionale where klausel</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$perpage</span><span class="var-description">: optionale perpage angabe</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$offset</span><span class="var-description">: optionale offset angabe</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetResource" id="setResource"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setResource</span> (line <span class="line-number">400</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen der Standard Resource, die mit dem Gateway verknüpft ist</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setResource
+		</span>
+					(<span class="var-type">$resource</span>&nbsp;<span class="var-name">$resource</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$resource</span>
+				<span class="var-name">$resource</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetResultClass" id="setResultClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setResultClass</span> (line <span class="line-number">519</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Wert von resultClass (Name der Klasse, die für die Resultsets verwendet wird)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setResultClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$resultClass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$resultClass</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUsePaginator" id="setUsePaginator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setUsePaginator</span> (line <span class="line-number">649</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Legt fest, ob die Datensätze bei der Verwendung von fetchAll() seitenweise ausgelesen werden sollen oder nicht</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setUsePaginator
+		</span>
+					(<span class="var-type">bool</span>&nbsp;<span class="var-name">$flag</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$flag</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetValueClass" id="setValueClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setValueClass</span> (line <span class="line-number">490</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen der Klasse, die für die Value Objekte verwendet wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setValueClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$valueClass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$valueClass</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 21 Nov 2010 20:50:30 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

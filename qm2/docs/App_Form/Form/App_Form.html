@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class App_Form</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class App_Form</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erweitert Zend_Form  Initialisiert die nicht standardmäßigen Dekoratoren und einen Übersetzer für die Fehlermeldungen</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> kastners</li>
+				<li><span class="field">see:</span> Zend_Form</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_App---Form.php.html">/App/Form.php</a> (line <span class="field">12</span>)
+		</p>
+		
+				
+		<pre>Zend_Form
+   |
+   --App_Form</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$title" title="details" class="var-name">$title</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+					<a href="#$_gatewayObject" title="details" class="var-name">$_gatewayObject</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+					<a href="#$_valueObject" title="details" class="var-name">$_valueObject</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_values" title="details" class="var-name">$_values</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																												
+												<div class="method-definition">
+											<span class="method-result">App_Form</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>&nbsp;<span class="var-name">$valueObject</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#createSubmitDecorators" title="details" class="method-name">createSubmitDecorators</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$submit</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#decorateElements" title="details" class="method-name">decorateElements</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#getGatewayObject" title="details" class="method-name">getGatewayObject</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getTitle" title="details" class="method-name">getTitle</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#getVal" title="details" class="method-name">getVal</a>
+											(<span class="var-type">string|int</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#getValueObject" title="details" class="method-name">getValueObject</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Form</span>
+										<a href="#populate" title="details" class="method-name">populate</a>
+											(<span class="var-type">array|stdObject</span>&nbsp;<span class="var-name">$values</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Form/Form/App_Form.html">App_Form</a></span>
+										<a href="#setGatewayObject" title="details" class="method-name">setGatewayObject</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$gatewayObject</span>, <span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>&nbsp;<span class="var-name">$valueObject</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setTitle" title="details" class="method-name">setTitle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Form/Form/App_Form.html">App_Form</a></span>
+										<a href="#setValueObject" title="details" class="method-name">setValueObject</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$valueObject</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$title" id="$title"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$title</span>
+						(line <span class="line-number">14</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_gatewayObject" id="$_gatewayObject"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+			<span class="var-name">$_gatewayObject</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Das zum Formular gehörige Gateway Objekt (meist das Gateway des Value Objekts, das das Formular erzeugt hat)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_valueObject" id="$_valueObject"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+			<span class="var-name">$_valueObject</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">21</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Das zum Formular gehörige value Objekt (meist das Value Objekt, das das Formular erzeugt hat selbst)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_values" id="$_values"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_values</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">15</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">38</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Überschreibt den Konstruktor von Zend_Form</p>
+<p class="description"><p>Initialisiert den &quot;Übersetzer&quot; für die Fehlermeldungen, initialisiert die Decorators im App  Verzeichnis und setzt die Decorators für das Formular (Tabellen)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">App_Form</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>&nbsp;<span class="var-name">$valueObject</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: (optional) werte, die im formular direkt gesetzt werden sollen</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (optional) optionen für das formular</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+				<span class="var-name">$valueObject</span><span class="var-description">: (optional) Value Objekt, das das Formular aufruft, bzw zu dem das Formular                                   &quot;gehört&quot;. Wird nur gesetzt, wenn das Formular von einem Value Objekt aus                                   aufgerufen wurde</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateSubmitDecorators" id="createSubmitDecorators"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createSubmitDecorators</span> (line <span class="line-number">128</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die Dekoratoren für einen Submit Button</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createSubmitDecorators
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$submit</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Form_Element_Submit</span>
+				<span class="var-name">$submit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddecorateElements" id="decorateElements"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">decorateElements</span> (line <span class="line-number">101</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dekoriert alle Elemente einheitlich</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			decorateElements
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetGatewayObject" id="getGatewayObject"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getGatewayObject</span> (line <span class="line-number">243</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt das Gateway Objekt von dem Value Objekt zurück, welches das Formular erzeugt hat.</p>
+<p class="description"><p>ACHTUNG! Diese Methode kann nur verwendet werden, wenn das Formular auch von einem Value Objekt erzeugt  oder wenn beim Erstellen des Formulars ein Value Objekt übergeben wurde!</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			getGatewayObject
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTitle" id="getTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTitle</span> (line <span class="line-number">171</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest den Titel des Formulars aus</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTitle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetVal" id="getVal"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getVal</span> (line <span class="line-number">148</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Wert zurück, der beim</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			getVal
+		</span>
+					(<span class="var-type">string|int</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|int</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetValueObject" id="getValueObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getValueObject</span> (line <span class="line-number">216</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt das Value Objekt zurück, von dem aus das Formular erzeugt wurde.</p>
+<p class="description"><p>ACHTUNG! Diese Methode kann nur verwendet werden, wenn das Formular auch von einem Value Objekt erzeugt  oder wenn beim Erstellen des Formulars ein Value Objekt übergeben wurde!</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			getValueObject
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpopulate" id="populate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">populate</span> (line <span class="line-number">186</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Formular mit Inhalt füllen</p>
+<p class="description"><p>Überschreibt die populate() Methode von Zend_Form. Wenn ein Objekt übergeben wird, dann wird versucht,  ob dieses eine toArray() Methode hat. Wenn ja, dann wird das Objekt mit dieser Methode zu einem Array  gemacht und anschließend wird die populate() Methode von Zend_Form aufgerufen</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Form</span>
+		<span class="method-name">
+			populate
+		</span>
+					(<span class="var-type">array|stdObject</span>&nbsp;<span class="var-name">$values</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|stdObject</span>
+				<span class="var-name">$values</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetGatewayObject" id="setGatewayObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setGatewayObject</span> (line <span class="line-number">232</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt das zum Formular gehörige Gateway Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Form/Form/App_Form.html">App_Form</a></span>
+		<span class="method-name">
+			setGatewayObject
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$gatewayObject</span>, <span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>&nbsp;<span class="var-name">$valueObject</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+				<span class="var-name">$valueObject</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+				<span class="var-name">$gatewayObject</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTitle" id="setTitle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setTitle</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Titel für ein Formular</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setTitle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetValueObject" id="setValueObject"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setValueObject</span> (line <span class="line-number">204</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt das zum Formular gehörige Value Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Form/Form/App_Form.html">App_Form</a></span>
+		<span class="method-name">
+			setValueObject
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$valueObject</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+				<span class="var-name">$valueObject</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 21 Nov 2010 20:50:33 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

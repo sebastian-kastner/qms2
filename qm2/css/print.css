@@ -1,0 +1,258 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 20px;
+	padding: 0;
+	font: normal 0.8em/1.2em verdana, aria, sans-serif;
+	color: #000;
+}
+
+h1 {
+	line-height: 110%;
+}
+
+a {
+	color: #E2001A;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	text-decoration: underline;
+	color: #E2001A;
+}
+
+#wrapper1 {
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+
+#wrapper2 {
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+
+/**
+* Headerbereich
+* @section header
+*/
+#header {
+	padding: 0;
+	margin: 0;
+	color: #000;
+}
+
+#header-logo {
+	float: left;
+	text-align: left;
+}
+
+#header-main {
+	margin-left: 140px;
+	padding-bottom: 40px;
+	border-bottom: 3px solid #E2001A;
+}
+
+#header-main #login {
+	font-weight:bold;
+	text-align:right;
+	visibility: hidden;
+}
+
+#head-txt {
+	float: left;
+	color: #666;
+	text-align: left;
+}
+
+/**
+* Obere Navigation unter dem Header
+* @section top_nav
+*/
+#top_nav {
+	display: none;
+}
+
+#maincol {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+/**
+* Linke Spalte
+* @section leftcol
+*/
+#leftcol {
+	display: none;
+}
+
+/**
+* Rechte Spalte
+* @section rightcol
+*/
+#rightcol {
+	display: none;
+}
+
+/**
+* Contentbereich
+* @section centercol
+*/
+#centercol {
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+/**
+* Footerbereich
+* @section footer
+*/
+#footer {
+	display: none;
+}
+
+/* Darstellung der Notationen der Prozesse */
+.process_notation {
+	color: #000000;
+	border: 1px solid #999999;
+	background-color: #e6e6e6;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+/* Darstellung der Prozessliste auf der Übersichtsseite */
+.processList {
+	list-style: none;
+}
+
+.processList li,.processList li img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+
+/**
+* Darstellung einer Tab Navigation 
+* @section tabmenu
+*/
+.tabmenu {
+	border-bottom: 1px solid black;
+	font-size: 0.83em;
+	padding: 5px 5px 0 5px;
+}
+
+.tabmenu li {
+	display: inline;
+	overflow: hidden;
+	padding: 5px 3px 0px 3px;
+	list-style-type: none;
+}
+
+.tabmenu a,a.active {
+	background: #E6E6E6;
+	border: 1px solid black;
+	padding: 3px 3px 1px 3px;
+	text-decoration: none;
+}
+
+.tabmenu a.active {
+	background: #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+.tabmenu a:hover {
+	background: #F5F5F5;
+}
+
+.tabmenu a.active:hover {
+	background: #FFFFFF;
+}
+
+/**
+* Tabelle zur Auflistung von Datenbankinhalten
+* @section table_listing 
+*/
+.table_listing {
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+}
+
+/* head bereich der tabelle */
+.table_listing thead,.table_head {
+	background-color: #E6E6E6;
+	border: 2px solid #CCCCCC;
+}
+
+.table_listing thead td,.table_head td {
+	padding-left: 2px;
+	padding-right: 2px;
+	font-weight: bold;
+}
+
+/* footer bereich der tabelle */
+.table_listing tfoot {
+	border: 2px solid #CCCCCC;
+}
+
+/* body bereich der tabelle */
+.table_listing tbody {
+	border: 2px solid #CCCCCC;
+}
+
+.table_listing tbody td {
+	border-bottom: 1px solid #CCCCCC;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.table_listing tbody tr:hover {
+	background-color: #EFEFEF;
+}
+
+/* anzeige der seitennummern in thead bzw in tfoot */
+.table_listing .page_numbers {
+	background-color: #E6E6E6;
+	border-top: 2px solid #CCCCCC;
+	font-weight: normal;
+	text-align: center;
+}
+
+/**
+* Tabelle zum Anzeigen von Formularen 
+* @section form_table
+*/
+.form_table {
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+
+/* kopfbereich */
+.form_table thead {
+	border: 2px solid #CCCCCC;
+}
+
+.form_table thead td {
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+
+.form_table th {
+	vertical-align: top;
+	padding-right: 10px;
+}
+
+.form_table .errors {
+	padding-left: 15px;
+	color: red;
+}
+
+/* fußbereich */
+.form_table tfoot {
+	background-color: #FFFFFF;
+	text-align: right;
+	border: 2px solid #CCCCCC;
+}

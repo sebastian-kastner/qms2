@@ -1,0 +1,71 @@
+<?php if(count($this->attribute['attribute_value']) > 0):?>
+<h2>Prozessschnittstellen</h2>
+<table width="100%" cellpadding="0" cellspacing="3" border="0">
+  <tr>
+    <td style="width:10%;"></td>
+    <td style="text-align:center;width:25%;font-weight:bold;">Schnittstellenbeschr.</td>
+    <td style="width:5%;"></td>
+    <td style="width:20%;"></td>
+    <td style="width:5%;"></td>
+    <td style="text-align:center;width:25%;font-weight:bold;">Schnittstellenbeschr.</td>
+    <td style="width:10%;"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td style="background-color:#E6E6E6;border:1px solid black;text-align:center;font-weight:bold;" 
+        rowspan="<?= (count($this->attribute['attribute_value'])+1); ?>">
+      <?= $this->process['notation']." ".$this->process['name']; ?>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+<?php foreach($this->attribute['attribute_value'] AS $inter):?>
+  <tr>
+    <td style="text-align:right;">
+      <?php foreach($inter['in'] AS $process):?>
+      <a href="<?= $this->baseUrl(); ?>/process/<?= $process['process_id']; ?>">
+        <?= $process['notation']; ?></a>
+      &gt;<br/>
+      <?php endforeach; ?>
+    </td>
+    
+    <?php if(count($inter['in']) > 0): ?>
+    <td style="background-color:#E6E6E6;">
+     <?= $inter['description']; ?>
+    </td>
+    <td style="text-align:center;vertical-align:middle;font-size:3em;">&gt;</td>
+    <?php else: ?>
+    <td></td>
+    <td></td>
+    <?php endif; ?>
+    
+    <?php if(count($inter['out']) > 0): ?>
+    <td style="text-align:center;vertical-align:middle;font-size:3em;">&gt;</td>
+    <td style="background-color:#E6E6E6;">
+     <?= $inter['description']; ?>
+    </td>
+    <?php else: ?>
+    <td></td>
+    <td></td>
+    <?php endif; ?>
+    
+    <td>
+      <?php foreach($inter['out'] AS $process):?>
+      &gt; 
+      <a href="<?= $this->baseUrl(); ?>/process/<?= $process['process_id']; ?>">
+        <?= $process['notation']; ?>
+      </a>
+      <br/>
+      <?php endforeach; ?>
+    </td>
+  </tr>
+  
+<?php endforeach; ?>
+
+<?php endif; ?>
+</table>
+

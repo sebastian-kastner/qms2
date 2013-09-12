@@ -1,0 +1,10 @@
+<?php /* Partial das für die Anzeige von Prozessattributen verwendet wird die aus Volltext bestehen */?>
+<h2>
+  <?= $this->attribute['name'] ?>
+  <?= $this->editImg('process_attributes', 'process/edit/'. $this->process['process_id']."/#attribute_".$this->attribute['process_attribute_id'], 
+                      array('id' => 'attribute_id_'.$this->attribute['process_attribute_id'], 'class' => 'edit_img')); ?>
+</h2>
+<div id="attribute_div_<?= $this->attribute['process_attribute_id']; ?>">
+  <?= $this->attribute['attribute_value'] ?>
+</div>
+<br/>

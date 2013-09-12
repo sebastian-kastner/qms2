@@ -1,0 +1,34 @@
+<h1>Prozesstypen Übersicht</h1>
+
+<div style="text-align:right;width:60%">
+  <a href="<?= $this->baseUrl(); ?>/admin/process/typeAdd">Neuen Prozesstypen erstellen</a>
+</div>
+<table class="table_listing" style="width:60%">
+  <thead>
+  <tr>
+    <td></td>
+    <td>Abk.</td>
+    <td>Prozesstyp Bezeichnung</td>
+    <td></td>
+    <td></td>
+  </tr>
+  </thead>
+<tbody>
+<?php foreach($this->processTypes AS $type): ?>
+  <tr>
+    <td>
+      <a href="<?= $this->baseUrl(); ?>/admin/process/types/moveUp/<?= $type['process_type_id']; ?>">
+        <img src="<?= $this->baseUrl(); ?>/img/arrow_up.gif" alt="Nach oben verschieben" title="Nach oben verschieben" border="0"/>
+      </a>
+      <a href="<?= $this->baseUrl(); ?>/admin/process/types/moveDown/<?= $type['process_type_id']; ?>">
+        <img src="<?= $this->baseUrl(); ?>/img/arrow_down.gif" alt="Nach unten verschieben" title="Nach unten verschieben" border="0"/>
+      </a>
+    </td>
+    <td><?= $type['shortcut']; ?></td>
+    <td><?= $type['name']; ?></td>
+    <td><a href="<?= $this->baseUrl(); ?>/admin/process/typeEdit/process_type_id/<?= $type['process_type_id']; ?>">Bearbeiten</a></td>
+    <td><a href="<?= $this->baseUrl(); ?>/admin/process/typeDel/process_type_id/<?= $type['process_type_id']; ?>">Löschen</a></td>
+  </tr>
+<?php endforeach; ?>
+</tbody>
+</table>

@@ -1,0 +1,37 @@
+<div style="text-align:right; width: 70%;">
+  <a href="<?= $this->baseUrl(); ?>/admin/user/add">
+    :: Neuen QM Benutzer erstellen
+  </a>
+</div>
+
+<h1>Benutzerübersicht</h1>
+
+<table class="table_listing" width="70%">
+  <thead>
+  <tr>
+    <td style="width:40%;">Benutzername:</td>
+    <td style="width:40%;">E-Mail:</td>
+    <td style="width:20%;"></td>
+  </tr>
+  </thead>
+  <tbody>
+  <?php foreach($this->users AS $user):?>
+  <tr>
+    <td><?= $user['username']; ?></td>
+    <td><?= $user['email']; ?></td>
+    <td>
+        <?= $this->editImg(false, 'admin/user/rightsEdit/user_id/'.$user['user_id'],
+                         array('src' => 'img/rights_edit.gif', 'alt' => 'Rechte bearbeiten', 'title' => 'Rechte bearbeiten')); ?>
+        &nbsp;
+        <?= $this->editImg(false, 'admin/user/roles/user_id/'.$user['user_id'],
+                         array('src' => 'img/group_edit.gif', 'alt' => 'Rollen bearbeiten', 'title' => 'Rollen bearbeiten')); ?>
+    </td>
+  </tr>
+  <?php endforeach;?>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan=3><?= $this->paginator; ?></td>
+  </tr>
+  </tfoot>
+</table>

@@ -1,0 +1,60 @@
+<?php 
+$this->jQuery()->enable()->uiEnable();
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/processList.js",
+    'text/javascript'
+);
+$this->headLink()->appendStylesheet(    
+                    $this->baseUrl()."/css/jquery-ui-1.8.11.custom.css",
+                    'screen'
+);
+?>
+<script type="text/javascript">
+$(document).ready(function() 
+{
+   $(".processList img").click(processListClick);
+   $("#autocomplete").autocomplete( {
+       source : "process/async/processSearch/",
+       minLength : 3,
+       select : function(event, ui) {
+           location.href = "<?= $this->baseUrl(); ?>/process/" + ui.item.id;
+       }
+  });
+});
+</script>
+
+<h1>Prozess&uuml;bersicht</h1>
+
+<h2>Prozesssuche</h2>
+
+<form action="<?= $this->baseUrl(); ?>/process/search" method="get"> 
+<input type="text" name="name" id="autocomplete" size="35"/>
+<input type="submit" value="Los!" />
+</form>
+Erweiterte Suche
+<br/>
+
+<div style="padding-bottom:70px;">
+<?php foreach($this->processList AS $processTypes): ?>
+<br/>
+<h2><?= $processTypes['type_name']; ?></h2>
+  <ul class="processList">
+  <?php foreach($processTypes['processes'] AS $process): ?>
+    <li id="process_id_<?= $process['process_id']; ?>">
+      <?php if($process['num_childs'] > 0): ?>
+        <img src="img/plus.gif" alt="Unterprozesse ausklappen" 
+          title="Unterprozesse ausklappen" id="<?= $process['process_id']; ?>"/>
+      <?php else: ?>
+        <img src="img/listSpacer.gif" alt="" title=""/>
+      <?php endif; ?>
+      <span class="process_notation">
+        <a href="<?= $this->baseUrl()."/process/".$process['process_id']; ?>"><?= $process['notation']; ?></a>
+      </span>
+      &nbsp;&nbsp;&nbsp;
+      <a href="<?= $this->baseUrl()."/process/".$process['process_id']; ?>"><?= $process['name']; ?></a>
+    </li>
+  <?php endforeach; ?>
+  </ul>
+<?php endforeach; ?>
+
+</div>

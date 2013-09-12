@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<title>Redesign QMS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="header"><!-- begin header -->
+	<div id="header-logo">
+		<img src="img/logo_stiftung_universitaet_hildesheim.png" height="81" alt="Logo der Stifungsuniversität Hildesheim" title="Logo der Stifungsuniversität Hildesheim" />
+	</div>
+	
+	<div id="header-main">
+		<div id="head-txt">
+			<h1 style="font-size:130%;">uniQuIS</h1>
+			<h2 style="font-size:90%;font-weight:normal;">Qualitätsinformationssystem der Stiftung Universität Hildesheim</h2>
+		</div>
+		<div id="login" style="font-weight:bold;text-align:right;padding-top:50px;">
+			Login
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Impressum
+		</div>
+	</div>
+</div><!-- end header -->
+
+<div id="top_nav">
+	<ul>
+		<li><a href="#">Prozesse</a></li>
+		<li><a href="#">QualitätsWiki</a></li>
+		<li><a href="#">Berichtswesen</a></li>
+		<li><a href="#">Verkündungsblatt</a></li>
+	</ul>
+</div>
+
+<!-- CLEARING OF THE TOP NAV -->
+<div style="clear:both;"></div>
+
+<div id="wrapper1">
+	<div id="wrapper2">
+		<div id="maincol">
+		
+			<div id="leftcol">
+				<ul>
+					<li>Prozessdokumentation</li>
+					<li>Qualitätswiki</li>
+					<li>Berichtswesen</li>
+					<li>Verkündungsblatt</li>
+				</ul>
+			</div>
+				
+			<div id="rightcol">
+				<fieldset style="background-color:#FFF">
+					<legend>Anzeige</legend>
+					
+					<form action="/qm/index.php" method="post">
+						<p>
+							<label for="showPrint">Druckansicht</label>
+							<input type="checkbox" id="showPrint" name="showPrint" value="y"/>
+						</p>
+					</form>
+					
+					<form action="/qm/index.php" method="post">
+						<p>
+							<label for="sqlPDF">Datensätze ohne Datei</label>
+							<input type="checkbox" id="sqlPDF" name="sqlPDF" value="y" />
+						</p>
+					</form>
+				
+				</fieldset>
+				
+				<fieldset>
+					<legend>Suche</legend>
+					<form action="processmanagement/search.php" method="post">
+						<p>
+							<textarea name="sqlSearchString" cols="20" rows="2" style="font-size:8pt;width:133px;height:34pt;"></textarea>
+							<select name="sqlSearchOperator">
+								<option value="AND">und</option>
+								<option value="OR">oder</option>
+							</select>
+							<input type="submit" value="suchen" />
+						</p>
+					</form>					
+				</fieldset>
+			</div>
+			
+			<div id="centercol">
+				<div id="breadcrumnbs">Bla &gt; Blub &gt; Ipsum</div>
+				<p>
+					Lorem ipsum dolor sit amet
+				</p>
+			</div>
+				
+		</div><!-- end main content area -->
+				
+		<div id="footer">
+			uniQuIS · elektronisches Qualitätsinformationssystem der Universität Hildesheim · 
+			6434 Zugriffe seit April 2008 · 
+			Feedback an <a href="mailto:qualitaet@uni-hildesheim.de" class="bottom">qualitaet@uni-hildesheim.de</a>
+		</div>
+	
+	</div>
+</div>
+
+</body>
+</html>

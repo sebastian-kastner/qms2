@@ -1,0 +1,12 @@
+<h2>Einordnung des Prozesses in der Prozesslandschaft</h2>
+<ul style="margin-left:15px;">
+  <li>
+    <a href="<?= $this->baseUrl(); ?>/process/">Prozesslandschaft</a>
+  </li>
+<?php foreach($this->attribute['attribute_value'] AS $key => $breadcrumb): ?>
+  <li style="margin-left:<?= ($key * 10); ?>px;">
+    <a href="<?= $this->url(array('process_id' => $breadcrumb['process_id']), 'processShow') ?>"><?= $breadcrumb['notation']." ".$breadcrumb['name']?></a>
+  </li>
+<?php endforeach; ?>
+</ul>
+<br/>

@@ -1,0 +1,145 @@
+<?= $this->doctype(); ?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+    <?php 
+    $this->headLink()->appendStylesheet($this->baseUrl().'/css/screen.css', 'screen');
+    $this->headLink()->appendStylesheet($this->baseUrl().'/css/print.css', 'print');
+    ?>
+    <?= $this->headLink(); ?>
+    <?= $this->headTitle(); ?>
+    <link rel="shortcut icon" href="/qms2/qm2/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author-personal" content="Sebastian Kastner" />
+    <meta name="author-mail" content="mailto:kastners@uni-hildesheim.de" />
+    <meta name="description" content="Portal des Qualit&auml;tsmanagements der Universit&auml;t Hildesheim" />
+    <meta name="language" content="de" />
+    <?= $this->jQuery()->setUiVersion('1.8.11'); ?>
+    <?= $this->headMeta(); ?>
+    <?= $this->headScript(); ?>
+    <base href="http://<?= $_SERVER['HTTP_HOST'].$this->baseUrl(); ?>/" />
+</head>
+
+<body id="main-body">
+
+<div id="header"><!-- begin header -->
+    <div id="header-logo">
+        <a href="http://www.uni-hildesheim.de"><img src="img/logo_stiftung_universitaet_hildesheim.png" height="81" alt="Logo der Stifungsuniversität Hildesheim" title="Logo der Stifungsuniversität Hildesheim"/></a>
+    </div>
+    
+    <div id="header-main">
+        <div id="head-txt">
+            <h1 style="font-size:130%;"><a href="/qms2/qm2/">uniQuIS</a></h1>
+            <h2 style="font-size:90%;font-weight:normal;">Qualitätsinformationssystem der Stiftung Universität Hildesheim</h2>
+        </div>
+        <div id="login">
+            <?php if($this->loggedIn != true): ?>
+                <a href="https://www.uni-hildesheim.de/cas/login">Login</a>
+            <?php else: ?>
+            <p>
+                <a href="<? echo $this->baseUrl(); ?>/auth/logout">Logout</a>
+            </p>
+            <?php endif; ?>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.uni-hildesheim.de/qm/impressum.php">Impressum</a>
+        </div>
+    </div>
+</div><!-- end header -->
+
+<div id="top_nav">
+    <ul>
+        <li><a href="<?php echo $this->baseUrl(); ?>/process">Prozesse</a></li>
+        <li><a href="http://www.uni-hildesheim.de/qm/wiki.php">QualitätsWiki</a></li>
+        <li><a href="#">Berichtswesen</a></li>
+        <li><a href="#">Verkündungsblatt</a></li>
+        <li><a href="<?= $this->baseUrl(); ?>/admin">Konfiguration</a></li>
+    </ul>
+</div>
+
+<!-- CLEARING OF THE TOP NAV -->
+<div style="clear:both;"></div>
+
+<div id="wrapper1">
+    <div id="wrapper2">
+        <div id="maincol">
+        
+            <div id="leftcol">
+                <!-- <ul>
+                    <li>Prozessdokumentation</li>
+                    <li>Qualitätswiki</li>
+                    <li>Berichtswesen</li>
+                    <li>Verkündungsblatt</li>
+                </ul> -->
+                <?php 
+                    //echo $this->navigation()->menu()->renderSubmenu(); 
+                    echo $this->menu;
+                    //echo "<pre>";
+                    //var_dump(echo $this->navigation()->menu());
+                    //echo "</pre>";
+                ?>
+            </div>
+                
+            <div id="rightcol">
+                <fieldset style="background-color:#FFF">
+                    <legend>Anzeige</legend>
+
+                    <form action="/qm/index.php" method="post">
+                    	<p>
+                    		<label for="editMode">Bearbeitungsmodus</label>
+                    		<input type="checkbox" id="editMode" name="editMode" 
+                    			   <?= ($this->isEditMode()) ? "checked" : "" ?>
+                    			   onchange="window.location='index/seteditmode'; return true;"/>
+                    	</p>
+                    </form>
+                    
+                    <form action="/qm/index.php" method="post">
+                        <p>
+                            <label for="showPrint">Druckansicht</label>
+                            <input type="checkbox" id="showPrint" name="showPrint" value="y"/>
+                        </p>
+                    </form>
+                    
+                    <form action="/qm/index.php" method="post">
+                        <p>
+                            <label for="sqlPDF">Datensätze ohne Datei</label>
+                            <input type="checkbox" id="sqlPDF" name="sqlPDF" value="y" />
+                        </p>
+                    </form>
+                
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Suche</legend>
+                    <form action="processmanagement/search.php" method="post">
+                        <p>
+                            <textarea name="sqlSearchString" cols="20" rows="2" style="font-size:8pt;width:133px;height:34pt;"></textarea>
+                            <select name="sqlSearchOperator">
+                                <option value="AND">und</option>
+                                <option value="OR">oder</option>
+                            </select>
+                            <input type="submit" value="suchen" />
+                        </p>
+                    </form>                 
+                </fieldset>
+            </div>
+            
+            <div id="centercol">
+                <div id="breadcrumnbs">
+                    <?= $this->navigation()->breadcrumbs(); ?>
+                </div>
+                <?= $this->layout()->content; ?>
+            </div>
+                
+        </div><!-- end main content area -->
+                
+        <div id="footer">
+            uniQuIS · elektronisches Qualitätsinformationssystem der Universität Hildesheim · 
+            6434 Zugriffe seit April 2008 · 
+            Feedback an <a href="mailto:qualitaet@uni-hildesheim.de" class="bottom">qualitaet@uni-hildesheim.de</a>
+        </div>
+    
+    </div>
+</div>
+
+</body>
+</html>

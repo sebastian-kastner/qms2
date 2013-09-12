@@ -1,0 +1,81 @@
+<?php 
+$this->jQuery()->enable()->uiEnable();
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/changeActivation.js",
+    'text/javascript'
+);
+$this->headLink()->appendStylesheet(    
+                    $this->baseUrl()."/css/jquery-ui-1.8.11.custom.css",
+                    'screen'
+                  );
+?>
+<script type="text/javascript">
+$(document).ready(function() 
+{
+   $("#autocomplete").autocomplete( {
+        source : "admin/async/rolesearch",
+        minLength : 3,
+        select : function(event, ui) {
+	        location.href = "<?= $this->baseUrl(); ?>/admin/acl/rightsEdit/role_id/" + ui.item.id;
+        }
+   });
+   $(".active_img").click(changeActivation);
+});
+</script>
+
+<h1>Rollen&uuml;bersicht</h1>
+
+<div style="width:70%;text-align:right">
+  <a href="<?= $this->baseUrl(); ?>/admin/acl/roleAdd">
+    :: Neue Rolle erstellen
+  </a>
+  <br/>
+  <a href="<?= $this->baseUrl(); ?>/admin/acl/changeActivation">
+    :: Deaktivierte Datensätze <?= ($this->show_deactive) ? 'ausblenden' : 'anzeigen'; ?>
+  </a>
+</div>
+<div style="width:70%;text-align:right;padding-bottom:10px;">
+  <form action="<?= $this->baseUrl(); ?>/admin/acl/roleSearch" method="get">
+    <input type="text" name="name" id="autocomplete" size="35"/>
+    <input type="submit" value="Los!" />
+  </form>
+</div>
+
+<table id="role-table" class="table_listing" width="70%">
+  <thead>
+  <tr>
+    <td style="width:25%;">Rolle:</td>
+    <td style="width:40%;">Beschreibung:</td>
+    <td style="width:5%;">Typ:</td>
+    <td style="width:15%;"></td>
+  </tr>
+  </thead>
+  <tbody>
+<?php
+foreach($this->roles AS $role) { ?>
+  <tr id="role-id-<?= $role['role_id']; ?>">
+    <td style="padding-left:<?= ($role['level']*15); ?>px;">
+      <?= $role['role_name']; ?>
+    </td>
+    <td><?= $role['role_description']; ?></td>
+    <td><?= $role['role_type']; ?></td>
+    <td>
+      <?= $this->editImg(false, 'admin/acl/rightsEdit/role_id/'.$role['role_id'],
+                         array('src' => 'img/rights_edit.gif', 'alt' => 'Rechte bearbeiten', 'title' => 'Rechte bearbeiten')); ?>
+      &nbsp;&nbsp;
+      <?= $this->editImg(false, 'admin/acl/rolesEdit/role_id/'.$role['role_id']); ?>
+      &nbsp;&nbsp;
+      <?= $this->delImg(false, 'admin/acl/rolesDel/role_id/'.$role['role_id']); ?>
+      &nbsp;&nbsp;
+      <?= $this->activeImg(false, 'admin/acl/rolesActivation/role_id/'.$role['role_id'], null, $role['is_active'], $role['role_id']); ?>
+    </td>
+  </tr>
+<?php } ?>
+  
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="4" class="page_numbers"><?= $this->paginator; ?></td>
+  </tr>
+  </tfoot>
+</table>

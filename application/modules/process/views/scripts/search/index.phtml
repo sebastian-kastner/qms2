@@ -1,0 +1,21 @@
+
+<h1>Prozesssuche - Ergebnisse für &quot;<?= $this->search_term; ?>&quot;</h1>
+
+<table class="table_listing" width=60%">
+  <thead>
+  <tr>
+    <td>Suchergebnisse</td>
+  </tr>
+  </thead>
+  <tbody>
+  <?php foreach($this->processes AS $process): ?>
+  <tr>
+    <td>
+      <a href="<?= $this->baseUrl(); ?>/process/<?= $process['process_id']; ?>">
+        <?= $process['notation']." ".$process['name']; ?>
+      </a>
+    </td>
+  </tr>
+  <? endforeach; ?>
+  </tbody>
+</table>

@@ -1,0 +1,38 @@
+<br/>
+<div style="width:60%;text-align:right;">
+  <a href="<?= $this->baseUrl(); ?>/admin/process/attributeAdd">Attribut hinzufügen</a>
+</div>
+<?php foreach($this->attributes AS $type): ?>
+<table class="table_listing" width="60%">
+  <thead>
+  <tr>
+    <td colspan="3">
+      <?= $type['type_name']; ?> (ID: <?= $type['process_attribute_type_id']; ?>)
+    </td>
+  </tr>
+  </thead>
+  <tbody>
+  <?php foreach($type['attributes'] AS $attribute): ?>
+  <tr>
+    <td style="padding-left:10px;width:50%">
+      <?= $attribute['attribute_position']; ?>
+      <a href="<?= $this->baseUrl(); ?>/admin/process/attributes/attributeUp/<?= $attribute['process_attribute_id']; ?>">
+        <img src="<?= $this->baseUrl(); ?>/img/arrow_up.gif" alt="Nach oben verschieben" title="Nach oben verschieben" border="0"/>
+      </a>
+      <a href="<?= $this->baseUrl(); ?>/admin/process/attributes/attributeDown/<?= $attribute['process_attribute_id']; ?>">
+        <img src="<?= $this->baseUrl(); ?>/img/arrow_down.gif" alt="Nach unten verschieben" title="Nach unten verschieben" border="0"/>
+      </a>
+      <?= $attribute['attribute_name']; ?>
+    </td>
+    <td>
+      <?= $this->editImg(false, 'admin/process/attributeEdit/process_attribute_id/'.$attribute['process_attribute_id']); ?>
+    </td>
+    <td>
+      <?= $this->delImg(false, 'admin/process/attributeDel/process_attribute_id/'.$attribute['process_attribute_id']); ?>
+    </td>
+  </tr>
+  <?php endforeach;?>
+  </tbody>
+</table>
+<br/>
+<?php endforeach; ?>

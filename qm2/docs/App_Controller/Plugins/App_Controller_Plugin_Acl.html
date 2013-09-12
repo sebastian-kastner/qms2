@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class App_Controller_Plugin_Acl</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class App_Controller_Plugin_Acl</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fungiert als Controller Plugin und wird vor dem Dispatch Prozess ausgeführt</p>
+<p class="description"><p>Zunächst wird überprüft, ob der User eingeloggt ist. Wenn nicht, dann werden ihm  Gastrechte zugewiesen. Ist er eingeloggt werden seine Rechte anhand seiner zugeteilten  Gruppen zugeteilt</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> kastners</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_App---Controller---Plugin---Acl.php.html">/App/Controller/Plugin/Acl.php</a> (line <span class="field">14</span>)
+		</p>
+		
+				
+		<pre>Zend_Controller_Plugin_Abstract
+   |
+   --App_Controller_Plugin_Acl</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#dispatchLoopStartup" title="details" class="method-name">dispatchLoopStartup</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Acl/App_Acl.html">App_Acl</a></span>
+										<a href="#_getRights" title="details" class="method-name">_getRights</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methoddispatchLoopStartup" id="dispatchLoopStartup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">dispatchLoopStartup</span> (line <span class="line-number">22</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Teilt dem User zum Beginn der Programmausführung seine Benutzerrechte zu. Falls der Benutzer nicht</p>
+<p class="description"><p>eingeloggt ist oder dem Benutzer keine besonderen Rechte zugeordnet sind werden dem Benutzer die  Gastrechte zugeschrieben</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> dispatchLoopStartup($request)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			dispatchLoopStartup
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_getRights" id="_getRights"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_getRights</span> (line <span class="line-number">60</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rechte des Benutzers bestimmen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Acl/App_Acl.html">App_Acl</a></span>
+		<span class="method-name">
+			_getRights
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 21 Nov 2010 20:50:31 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

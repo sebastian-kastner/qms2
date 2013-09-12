@@ -1,0 +1,21 @@
+<?php if(count($this->attribute['attribute_value']) > 0): ?>
+<h2>Für diesen Prozess existieren folgende Teilprozesse</h2>
+<ul style="margin-left:15px;">
+<?php foreach($this->attribute['attribute_value'] AS $child): ?>
+  <li style="margin-left:<?= (($child['level']-2)*20); ?>px;">
+    <a href="<?= $this->url(array('process_id' => $child['process_id']), 'processShow') ?>"><?= $child['notation']." ".$child['name'] ?></a>
+    <?= $this->editImg('process', 'process/index/processUp/process_id/'.$child['process_id'],
+                        array(
+                          'alt' => 'Nach oben verschieben', 
+                          'src' => '/img/arrow_up.gif')
+                      ); ?>                        
+    <?= $this->editImg('process', 'process/index/processDown/process_id/'.$child['process_id'],
+                        array(
+                          'alt' => 'Nach unten verschieben', 
+                          'src' => '/img/arrow_down.gif')
+                      ); ?>
+  </li>
+<?php endforeach; ?>
+</ul>
+<br/><br/>
+<?php endif; ?>

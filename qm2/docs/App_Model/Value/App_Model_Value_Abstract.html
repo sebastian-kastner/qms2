@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class App_Model_Value_Abstract</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class App_Model_Value_Abstract</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Abstrakte Klasse für die Value Objekte. Die Value Objekte repräsentieren jeweils einen einzigen Datensatz  aus der Datenbank.</p>
+<p class="description"><p>In den konkreten Klassen, die von der abstrakten Value Klasse erben müssen in dem array $_allowed die  erlaubten Felder spezifiziert werden (in der Regel die Felder der Datenbank)  Außerdem muss der Name des Tabellenobjektes (vom Typ Zend_Db_Table_Abstract) und der Name der Zend_Form  Klasse, die als Validator fungieren soll angegeben werden.  Die Abstrakte Value Klasse liefert von Haus aus Funktionen um die einzelnen Datensätze zu speichern und zu  löschen sowie einige getter und setter Methoden.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> kastners</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_App---Model---Value---Abstract.php.html">/App/Model/Value/Abstract.php</a> (line <span class="field">19</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../../App_Model/Value/App_Model_Value_TreeAbstract.html">App_Model_Value_TreeAbstract</a></td>
+					<td>
+											Abstrakte Klasse, die von konkreten Value Klassen erweitert wird, falls diese Value Objekte in einem Baum  dargestellt werden
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../../App_Model/Value/App_Model_Value_OrderedList.html">App_Model_Value_OrderedList</a></td>
+					<td>
+											Abstrakte Klasse, die von konkreten Value Klassen erweitert wird, falls diese Value Objekte in einer geordneten,  eindimensionalen Liste dargestellt werden
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																																																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_active" title="details" class="var-name">$_active</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Array</span>
+					<a href="#$_allowed" title="details" class="var-name">$_allowed</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_createdBy" title="details" class="var-name">$_createdBy</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Array</span>
+					<a href="#$_data" title="details" class="var-name">$_data</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_dateCreated" title="details" class="var-name">$_dateCreated</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_dateUpdated" title="details" class="var-name">$_dateUpdated</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_entityName" title="details" class="var-name">$_entityName</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Zend_Form</span>
+					<a href="#$_form" title="details" class="var-name">$_form</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">String</span>
+					<a href="#$_formClass" title="details" class="var-name">$_formClass</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+					<a href="#$_gateway" title="details" class="var-name">$_gateway</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Primary</span>
+					<a href="#$_id" title="details" class="var-name">$_id</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_lastAction" title="details" class="var-name">$_lastAction</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Array</span>
+					<a href="#$_protected" title="details" class="var-name">$_protected</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Zend_Db_Table_Abstract</span>
+					<a href="#$_table" title="details" class="var-name">$_table</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">String</span>
+					<a href="#$_tableClass" title="details" class="var-name">$_tableClass</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_updatedBy" title="details" class="var-name">$_updatedBy</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">int|string|stdObject|array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#addAdditionalInsertData" title="details" class="method-name">addAdditionalInsertData</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#checkPrimary" title="details" class="method-name">checkPrimary</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#clearProtectedProperties" title="details" class="method-name">clearProtectedProperties</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$clear_id</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getActiveCol" title="details" class="method-name">getActiveCol</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getEntityName" title="details" class="method-name">getEntityName</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Form</span>
+										<a href="#getForm" title="details" class="method-name">getForm</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getFormClass" title="details" class="method-name">getFormClass</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#getGateway" title="details" class="method-name">getGateway</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getLastAction" title="details" class="method-name">getLastAction</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getPrimary" title="details" class="method-name">getPrimary</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#getPrimaryValue" title="details" class="method-name">getPrimaryValue</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getRedirectOptions" title="details" class="method-name">getRedirectOptions</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$redirect</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getTable" title="details" class="method-name">getTable</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getTableClass" title="details" class="method-name">getTableClass</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getTableName" title="details" class="method-name">getTableName</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$tableClass</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#getValue" title="details" class="method-name">getValue</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#init" title="details" class="method-name">init</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#insert" title="details" class="method-name">insert</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$insert_id</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#populate" title="details" class="method-name">populate</a>
+											(<span class="var-type">array|object </span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$validate</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed|bool</span>
+										<a href="#save" title="details" class="method-name">save</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">unknown_type</span>
+										<a href="#setEntityName" title="details" class="method-name">setEntityName</a>
+											([<span class="var-type">$entity</span>&nbsp;<span class="var-name">$entity</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Form</span>
+										<a href="#setForm" title="details" class="method-name">setForm</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$form</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setFormClass" title="details" class="method-name">setFormClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$formClass</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+										<a href="#setGateway" title="details" class="method-name">setGateway</a>
+											(<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>&nbsp;<span class="var-name">$gateway</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setLastAction" title="details" class="method-name">setLastAction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setOptions" title="details" class="method-name">setOptions</a>
+											(<span class="var-type">array|Zend_Config</span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setPrimary" title="details" class="method-name">setPrimary</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#setTable" title="details" class="method-name">setTable</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setTableClass" title="details" class="method-name">setTableClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableClass</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+										<a href="#setValue" title="details" class="method-name">setValue</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#stripUnallowedKeys" title="details" class="method-name">stripUnallowedKeys</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#toArray" title="details" class="method-name">toArray</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">int</span>
+										<a href="#update" title="details" class="method-name">update</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__call" title="details" class="method-name">__call</a>
+											(<span class="var-type">$name</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$arguments</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#__isset" title="details" class="method-name">__isset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__unset" title="details" class="method-name">__unset</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_active" id="$_active"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_active</span>
+			 = <span class="var-default"> 'is_active'</span>			(line <span class="line-number">106</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Spalte, in der der Aktivierungsstatus gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_allowed" id="$_allowed"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Array</span>
+			<span class="var-name">$_allowed</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">24</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Erlaubte properties</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_createdBy" id="$_createdBy"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_createdBy</span>
+			 = <span class="var-default"> 'created_by'</span>			(line <span class="line-number">88</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">spalte, in der der Ersteller gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_data" id="$_data"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Array</span>
+			<span class="var-name">$_data</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">44</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Eigentlichen Daten des Value Objekts</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_dateCreated" id="$_dateCreated"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_dateCreated</span>
+			 = <span class="var-default"> 'date_created'</span>			(line <span class="line-number">82</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Spalte, in der das erstellungsdatum gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_dateUpdated" id="$_dateUpdated"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_dateUpdated</span>
+			 = <span class="var-default"> 'date_updated'</span>			(line <span class="line-number">94</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Spalte, in das update datum gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_entityName" id="$_entityName"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_entityName</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">76</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Der Name der Entität (wird bei statusmeldungen angezeigt)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_form" id="$_form"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Zend_Form</span>
+			<span class="var-name">$_form</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">49</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Zum Value Objekt gehörendes Formular</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_formClass" id="$_formClass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">String</span>
+			<span class="var-name">$_formClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Klassenname des Standardformulars</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_gateway" id="$_gateway"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+			<span class="var-name">$_gateway</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">54</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Zum Value Objekt gehörendes Gateway</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_id" id="$_id"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Primary</span>
+			<span class="var-name">$_id</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> der zum Value Objekt gehörenden Tabelle</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_lastAction" id="$_lastAction"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_lastAction</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Die letzte durchgeführte aktion. Wird nach update, insert oder update Operationen geändert</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> enthält mögliche werte: insert, update, delete</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_protected" id="$_protected"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Array</span>
+			<span class="var-name">$_protected</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Properties, die bei Insert und Update Operationen nicht erlaubt sind (zB Primarys)</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_table" id="$_table"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Zend_Db_Table_Abstract</span>
+			<span class="var-name">$_table</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">59</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Zum Value Objekt gehörendes Tabellenobjekt</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tableClass" id="$_tableClass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">String</span>
+			<span class="var-name">$_tableClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">39</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> Klassenname der Standardtabelle</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_updatedBy" id="$_updatedBy"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_updatedBy</span>
+			 = <span class="var-default"> 'updated_by'</span>			(line <span class="line-number">100</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Spalte, in der der User gespeichert wird, der die letzten Änderungen vorgenommen hat</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Konstruktor. Überprüft, ob der Array für die erlaubten Felder gesetzt ist und füllt das Objekt  anschließend mit den übergebenen Daten.</p>
+<p class="description"><p>Wird ein Array übergeben, dann werden die Daten aus dem Array über die populate Methode mit den  im Value Objekt erlaubten Feldern abgeglichen und in das Value Objekt geschrieben.</p><p>Wird eine Zahl übergeben wird diese als ID interpretiert. Anhand der ID wird ein Datensatz ausgelesen  und die Daten des Resultats werden in das Value Objekt geschrieben.</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">int|string|stdObject|array</span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int|string|stdObject|array</span>
+				<span class="var-name">$data</span><span class="var-description">: die Daten für das Value Objekt.                                    Folgende Werte sind möglich:                                           int -&gt; wird als ID des Datensatzes interpretiert                                           string -&gt; wird als WHERE Klausel interpretiert                                           stdObject -&gt; Versuch, das Objekt in einen Array umzuwandeln                                           array -&gt; Daten aus dem Array werden direkt in das Value Objekt geschrieben</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddAdditionalInsertData" id="addAdditionalInsertData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addAdditionalInsertData</span> (line <span class="line-number">286</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erweitert einen Array mit Daten für einen Insert um etwaige Zusatzinformationen (created_by, created_on, etc..)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			addAdditionalInsertData
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: array, an den die zusätzlichen Daten angehängt werden sollen</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckPrimary" id="checkPrimary"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">checkPrimary</span> (line <span class="line-number">626</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Überprüft, ob im Value Objekt ein Primärschlüssel vorhanden ist, oder ob das Feld dafür leer ist</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			checkPrimary
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearProtectedProperties" id="clearProtectedProperties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">clearProtectedProperties</span> (line <span class="line-number">566</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Löscht geschützte Properties aus einem Array, bevor dieser in die Datenbank geschrieben wird.</p>
+<p class="description"><p>Die geschützten Properties werden in dem Array $_protected definiert. Auch wenn $_protected leer ist  wird zumindest das Primary Feld aus dem Daten Array gelöscht  Muss vor Insert oder Update Operationen aufgerufen werden!</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			clearProtectedProperties
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$clear_id</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$clear_id</span><span class="var-description">: (opt) Gibt an, ob die ID entfernt werden soll oder nicht</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete</span> (line <span class="line-number">301</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Löscht das Value Objekt aus der Datenbank.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Anzahl der gelöschten Datensätze</li>
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			delete
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../App_Model/Value/App_Model_Value_OrderedList.html#methoddelete">App_Model_Value_OrderedList::delete()</a>
+								: Löscht den Datensatz und passt die position nachfolgender Datensätze an
+							</li>
+				</ul>
+	</div>
+<a name="methodgetActiveCol" id="getActiveCol"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getActiveCol</span> (line <span class="line-number">769</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Spalte zurück, in der der Aktivierungsstatus gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getActiveCol
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetEntityName" id="getEntityName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEntityName</span> (line <span class="line-number">494</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Entität zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getEntityName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetForm" id="getForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getForm</span> (line <span class="line-number">779</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt das zum Value Objekt gehörende Formular Objekt zurück.</p>
+<p class="description"><p>Falls das Formular Objekt leer ist wird ein neues Formular erzeugt</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Form</span>
+		<span class="method-name">
+			getForm
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFormClass" id="getFormClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getFormClass</span> (line <span class="line-number">819</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Klasse für die Formular Objekte zurück. Zuerst wird überprüft, ob in dem Value Objekt  ein Name für die Formular Klasse angegeben wurde. Wenn nicht, dann wird der Name der Formular Klasse über  Konventionen erstellt.</p>
+<p class="description"><p>Nach der Konvention befinden sich die Formular Klassen im gleichen Modul im Ordner &quot;models/forms&quot;. Der  Name der Formular Klasse ist in der Einzahl.  Ist der Name der Value Klasse beispielsweise Admin_Model_Value_Role, dann wäre der Name für die  Formular Klasse ohne weitere Angaben Admin_Model_Form_Role</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getFormClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetGateway" id="getGateway"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getGateway</span> (line <span class="line-number">749</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt das gateway zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			getGateway
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLastAction" id="getLastAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLastAction</span> (line <span class="line-number">552</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Art der letzten durchgeführten Aktion zurück</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> art der letzten durchgeführten Aktion</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLastAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPrimary" id="getPrimary"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPrimary</span> (line <span class="line-number">708</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen des Felds mit dem Primärschlüssel zurück. Falls die ID noch nicht ausgelesen wurde</p>
+<p class="description"><p>liest die Methode den Namen des ID Feldes von dem Tabellen Objekt aus</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Name des Primary Feldes</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPrimary
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPrimaryValue" id="getPrimaryValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPrimaryValue</span> (line <span class="line-number">733</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Wert des Primärschlüssels zurück. Wenn das Feld für den Primärschlüssel leer ist wird eine Exception geworfen</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getPrimaryValue
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRedirectOptions" id="getRedirectOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRedirectOptions</span> (line <span class="line-number">461</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt einen Array zurück, in dem Informationen über die zuletzt ausgeführte Aktion enthalten sind</p>
+<p class="description"><p>Diese Methode dient hauptsächlich dazu auf einer Weiterleitungsseite Informationen zum  bearbeiteten/gelöschten/eingetragenen Datensatz  Im Array, der zurückgegeben wird existieren folgende keys:    msg =&gt; eine beschreibung der letzten aktion mit Informationen wie der Art der Aktion und der ID    head =&gt; kurze überschrift zur aktion    redirect =&gt; wenn eine adresse übergeben wird, an die weitergeleitet werden soll, wird diese hier gespeichert</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRedirectOptions
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$redirect</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$redirect</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTable" id="getTable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTable</span> (line <span class="line-number">639</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt das Tabellenobjekt zurück (falls es noch nicht erstellt wurde wird es vom gateway angefordert)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getTable
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTableClass" id="getTableClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTableClass</span> (line <span class="line-number">673</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Klasse für die Tabellen Objekte zurück. Zuerst wird überprüft, ob in dem Value Objekt  ein Name für die Tabellen Klasse angegeben wurde. Wenn nicht, dann wird der Name der Tabellen Klasse über  Konventionen erstellt.</p>
+<p class="description"><p>Nach der Konvention befinden sich die Tabellen Klassen im gleichen Modul im Ordner &quot;models/DbTable&quot;. Der  Name der Tabellen Klasse ist in der Mehrzahl.  Ist der Name der Value Klasse beispielsweise Admin_Model_Value_Role, dann wäre der Name für die  Tabellen Klasse ohne weitere Angaben Admin_Model_DbTable_Roles</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTableClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTableName" id="getTableName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTableName</span> (line <span class="line-number">441</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Tabelle zurück. Wird kein Wert übergeben wird der Name der Tabelle zurückgegeben, die als</p>
+<p class="description"><p>Default Tabelle für das Value Objekt definiert ist. Ansonsten kann der Name einer Tabellenklasse übergeben werden</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTableName
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$tableClass</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableClass</span><span class="var-description">: Name der Tabellenklasse (opt)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetValue" id="getValue"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getValue</span> (line <span class="line-number">368</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Wert zurück, der unter $key gespeichert ist</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			getValue
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinit" id="init"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">init</span> (line <span class="line-number">528</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Die init() Funktion ist ein Hook, der von den erbenden Klassen ausgefüllt werden kann.</p>
+<p class="description"><p>Sie wird am Ende des Konstruktors aufgerufen und dient dazu, dass die Unterklassen bei der Erzeugung  eines Objektes eigenen Code hinzufügen können ohne die __construct() Methode überschreiben zu müssen</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			init
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodinsert" id="insert"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert</span> (line <span class="line-number">264</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Einfügen des Value Objektes als neue Zeile ein der Datenbank</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Primärschlüssel des eingefügten Datensatzes</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			insert
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$insert_id</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$insert_id</span><span class="var-description">: Gibt an, ob die ID des Datensatzes im Insert Statement eingefügt werden                         soll oder nicht. Bei Autoincrement wird die ID Standardmäßig nicht                         eingefügt.</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../App_Model/Value/App_Model_Value_TreeAbstract.html#methodinsert">App_Model_Value_TreeAbstract::insert()</a>
+								: Insert Methode überschreiben (es müssen neue lft und rgt Werte ermittelt werden)
+							</li>
+					<li>
+				<a href="../../App_Model/Value/App_Model_Value_OrderedList.html#methodinsert">App_Model_Value_OrderedList::insert()</a>
+								: Einfügen eines Datensatzes. Überschreibt die insert() Methode der abstrakten Value Klasse
+							</li>
+				</ul>
+	</div>
+<a name="methodpopulate" id="populate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">populate</span> (line <span class="line-number">334</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Objekt mit Daten füllen</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			populate
+		</span>
+					(<span class="var-type">array|object </span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$validate</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|object </span>
+				<span class="var-name">$data</span><span class="var-description">: Die Daten, mit denen das Objekt befüllt werden soll.         Objekte mit toArray Methode und Arrays erlaubt.         Beim &quot;befüllen&quot; des Objekts wird noch nicht überprüft, ob die jeweiligen keys überhaupt im Objekt erlaubt sind.         Dies geschieht erst, wenn das Objekt in die Datenbank geschrieben wird</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$validate</span><span class="var-description">: Sollen die Daten vor dem Schreiben ins Value Objekt über das Formular validiert werden? (opt)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number">201</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speichert das Value Objekt in der Datenbank (je nachdem ob das Value Objekt über eine ID</p>
+<p class="description"><p>verfügt oder nicht wird ein neuer Datensatz angelegt oder ein existierender bearbeitet)</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> anzahl der bearbeiteten datensätze (update), id des eingefügten datensatz (insert)                     oder false, wenn das formular nicht validiert werden konnte</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed|bool</span>
+		<span class="method-name">
+			save
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetEntityName" id="setEntityName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setEntityName</span> (line <span class="line-number">511</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen der Entität. Wird kein Wert übergeben wird der Name der Entität aus dem Klassennamen</p>
+<p class="description"><p>abgeleitet. Heißt die Klasse Beispielsweise Admin_Model_Value_Role, dann wird daraus der Entitätsname  Role abgeleitet</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown_type</span>
+		<span class="method-name">
+			setEntityName
+		</span>
+					([<span class="var-type">$entity</span>&nbsp;<span class="var-name">$entity</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$entity</span>
+				<span class="var-name">$entity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetForm" id="setForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setForm</span> (line <span class="line-number">795</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt das Formular Objekt</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Form</span>
+		<span class="method-name">
+			setForm
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$form</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Form</span>
+				<span class="var-name">$form</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFormClass" id="setFormClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setFormClass</span> (line <span class="line-number">838</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen der Formularklasse</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setFormClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$formClass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$formClass</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetGateway" id="setGateway"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setGateway</span> (line <span class="line-number">759</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt das Gateway des Value Objekts</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>
+		<span class="method-name">
+			setGateway
+		</span>
+					(<span class="var-type"><a href="../../App_Model/Gateway/App_Model_Gateway_Abstract.html">App_Model_Gateway_Abstract</a></span>&nbsp;<span class="var-name">$gateway</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$gateway</span>
+				<span class="var-name">$gateway</span><span class="var-description">: App_Model_Gateway_Abstract Das Gateway Objekt, das gesetzt werden soll</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLastAction" id="setLastAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setLastAction</span> (line <span class="line-number">538</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt lastAction, also die zuletzt auf dem Objekt ausgeführte Aktion</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setLastAction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: die zuletzt ausgeführt action (erlaubte werte: insert, update, delete)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOptions" id="setOptions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setOptions</span> (line <span class="line-number">589</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Optionen setzen</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setOptions
+		</span>
+					(<span class="var-type">array|Zend_Config</span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|Zend_Config</span>
+				<span class="var-name">$options</span><span class="var-description">: Optionen</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPrimary" id="setPrimary"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPrimary</span> (line <span class="line-number">721</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen des Primary Feldes. Der Name wird vom im Objekt gespeicherten Tabellen Objekt ausgelesen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setPrimary
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetTable" id="setTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setTable</span> (line <span class="line-number">656</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt das Tabellenobjekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			setTable
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$table</span>
+				<span class="var-name">$table</span><span class="var-description">: Zend_Db_Table_Abstract das tabellenobjekt, das für das value objekt gesetzt werden soll</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTableClass" id="setTableClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setTableClass</span> (line <span class="line-number">697</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen der Klasse für die Tabellen Objekte</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setTableClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableClass</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableClass</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetValue" id="setValue"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setValue</span> (line <span class="line-number">379</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt einen Wert in Value Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App_Model/Value/App_Model_Value_Abstract.html">App_Model_Value_Abstract</a></span>
+		<span class="method-name">
+			setValue
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span><span class="var-description">: index des wertes</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: wert, der gesetzt werden soll</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstripUnallowedKeys" id="stripUnallowedKeys"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">stripUnallowedKeys</span> (line <span class="line-number">397</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Nimmt den Array mit den Objektdaten ($this-&gt;_data) und entfernt alle nicht erlaubten keys, um bei insert und update</p>
+<p class="description"><p>operationen keine Fehlermeldungen zu erzeugen  Der $this-&gt;_data array wird dabei NICHT berührt! es wird ein neuer array ohne die nicht erlaubten keys erzeugt und  zurückgegeben  alternativ kann auch ein array mit daten übergeben werden. Dann wird dieser array in bearbeitet und zurückgegeben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			stripUnallowedKeys
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$data</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: (optional) daten array, der zu bearbeiten ist</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoArray" id="toArray"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">toArray</span> (line <span class="line-number">422</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Konvertiert das Value Objekt in einen Array mit den Daten aus data</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Array mit den Daten des Value Objekts</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			toArray
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate" id="update"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">update</span> (line <span class="line-number">231</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bearbeiten des Datensatzes in der Datenbank</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Anzahl der bearbeiteten Datensätze (in der Regel 1)</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			update
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../App_Model/Value/App_Model_Value_TreeAbstract.html#methodupdate">App_Model_Value_TreeAbstract::update()</a>
+								: Update Funktion überschreiben, um lft und rgt Werte des Baums neu zu berechnen
+							</li>
+					<li>
+				<a href="../../App_Model/Value/App_Model_Value_OrderedList.html#methodupdate">App_Model_Value_OrderedList::update()</a>
+								: Datensatz bearbeiten. Vor dem eigentlichen Schreiben des Datensatzes wird die Position der restlichen  Datensätze angepasst und die neue Position gespeichert. Danach wird Datensatz mit allen anderen Feldern gespeichert.
+							</li>
+				</ul>
+	</div>
+<a name="method__call" id="__call"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__call</span> (line <span class="line-number">911</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wird ausgeführt, wenn eine nicht vorhandene Methode ausgeführt werden soll</p>
+<p class="description"><p>Die Methode simuliert getter und setter für die in $this-&gt;_data vorhandenen Daten  Es wird angenommen, dass getter Methoden als getProperty() und setter Methoden als setProperty()  aufgerufen werden (also jeweils get bzw set gefolgt vom property namen, wobei der erste Buchstabe  des Property Namens groß geschrieben wird)</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__call
+		</span>
+					(<span class="var-type">$name</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$arguments</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$arguments</span><span class="var-description">: Argumente, mit denen die Methode aufgerufen wurde</span>			</li>
+					<li>
+				<span class="var-type">$name</span>
+				<span class="var-name">$name</span><span class="var-description">: Name der aufgerufenen Methode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__get</span> (line <span class="line-number">866</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overload: Wert auslesen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__isset" id="__isset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__isset</span> (line <span class="line-number">881</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overload: Überprüfen, ob Wert gesetzt ist</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			__isset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__set</span> (line <span class="line-number">852</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overload: diese Methode setzt automatisch die Werte im $this-&gt;_data array, wenn der angegebene Key  in $this-&gt;_allowed erlaubt wurde</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Model_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__unset" id="__unset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__unset</span> (line <span class="line-number">891</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Overload: Wert löschen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__unset
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 21 Nov 2010 20:50:29 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

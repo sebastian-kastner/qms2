@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <nav>
+        <default>
+            <label>uniQuis</label>
+            <module>default</module>
+            <controller>index</controller>
+            <action>index</action>
+            <id>default</id>
+            <visible>0</visible>
+        </default>
+
+        <process>
+            <label>Prozesslandschaft</label>
+            <module>process</module>
+            <controller>index</controller>
+            <action>index</action>
+            <route>default</route>
+            <id>process</id>
+        
+            <pages>
+                
+                <handbook>
+                    <label>Handbuch QM</label>
+                    <module>process</module>
+                    <controller>index</controller>
+                    <action>handbook</action>
+                    <route>default</route>
+                </handbook>
+
+                <documents>
+                    <label>Prozessdokumente</label>
+                    <module>process</module>
+                    <controller>index</controller>
+                    <action>notyet</action>
+                    <route>default</route>
+                </documents>
+                
+                <regulations>
+                    <label>Richtlinien</label>
+                    <module>process</module>
+                    <controller>index</controller>
+                    <action>notyet</action>
+                    <route>default</route>
+                </regulations>
+                
+                <furtherReading>
+                    <label>Weiterf. Literatur</label>
+                    <module>process</module>
+                    <controller>index</controller>
+                    <action>notyet</action>
+                    <route>default</route>
+                </furtherReading>
+                
+                <search>
+                    <label>Suche</label>
+                    <module>process</module>
+                    <controller>index</controller>
+                    <action>search</action>
+                    <route>default</route>
+                </search>
+
+            </pages>
+        </process>
+        
+        <configuration>
+            <label>Konfiguration</label>
+            <module>admin</module>
+            <controller>index</controller>
+            <action>index</action>
+            <route>default</route>
+            <id>admin</id>
+            <!-- <resource>admin</resource>
+            <privilege>1</privilege> -->
+            
+            <pages>
+                <acl>
+                    <label>Benutzerrechte</label>
+                    <module>admin</module>
+                    <controller>acl</controller>
+                    <action>index</action>
+                    <route>default</route>
+                    
+                    <pages>
+                        <roles>                        
+	                        <label>Rollen</label>
+	                        <module>admin</module>
+	                        <controller>acl</controller>
+	                        <action>roles</action>
+                            <route>default</route>
+                        
+                        	<roleAdd>
+								<label>Rolle hinzufügen</label>
+								<module>admin</module>
+								<controller>acl</controller>
+								<action>roleAdd</action>
+								<route>default</route>
+                        	</roleAdd>
+                        	
+                        	<rightsEdit>
+								<label>Rollenrechte bearbeiten</label>
+								<module>admin</module>
+								<controller>acl</controller>
+								<action>rightsEdit</action>
+								<route>default</route>
+                        	</rightsEdit>
+                        </roles>
+                        
+                        <resources>
+	                        <label>Resourcen</label>
+	                        <module>admin</module>
+	                        <controller>acl</controller>
+	                        <action>resources</action>
+                            <route>default</route>
+                            
+                            <resourceEdit>
+								<label>Resource editieren</label>
+								<module>admin</module>
+								<controller>acl</controller>
+								<action>resourceEdit</action>
+								<route>default</route>
+                            </resourceEdit>
+                                                        
+                        </resources> 
+                        
+                        <users>
+                            <label>Benutzer</label>
+                            <module>admin</module>
+                            <controller>user</controller>
+                            <action>index</action>
+                            <route>default</route>
+                            
+                            <userAdd>
+								<label>Benutzer hinzufügen</label>
+								<module>admin</module>
+								<controller>user</controller>
+								<action>user</action>
+								<route>default</route>
+                            </userAdd>
+                            
+                            <roleEdit>
+								<label>Benutzerrollen editieren</label>
+								<module>admin</module>
+								<controller>user</controller>
+								<action>roles</action>
+								<route>default</route>
+                            </roleEdit>
+                            
+                            <rightsEdit>
+								<label>Benutzerrechte bearbeiten</label>
+								<module>admin</module>
+								<controller>user</controller>
+								<action>rightsEdit</action>
+								<route>default</route>
+                            </rightsEdit>
+                        </users>
+                        
+                    </pages>
+                </acl>
+                
+                <processSettings>
+                    <label>Prozesseinstellungen</label>
+                    <module>admin</module>
+                    <controller>process</controller>
+                    <action>index</action>
+                    <route>default</route>
+                    
+                    <pages>
+                    
+	                    <processAttr>
+	                       <label>Prozessattribute</label>
+	                       <module>admin</module>
+	                       <controller>process</controller>
+	                       <action>attributes</action>
+                            <route>default</route>
+                            
+                            <pages>
+								<attributeAdd>
+									<label>Prozessattribut erstellen</label>
+									<module>admin</module>
+									<controller>process</controller>
+									<action>attributeAdd</action>
+									<route>default</route>
+								</attributeAdd>
+								
+								<attributeEdit>
+									<label>Prozessattribut bearbeiten</label>
+									<module>admin</module>
+									<controller>process</controller>
+									<action>attributeEdit</action>
+									<route>default</route>
+								</attributeEdit>
+								
+                            </pages>
+                            
+	                    </processAttr>
+	                
+	                    <processTypes>
+							<label>Prozesstypen</label>
+							<module>admin</module>
+							<controller>process</controller>
+							<action>types</action>
+							<route>default</route>
+                           
+							<pages>
+								<addType>
+									<label>Prozesstyp hinzufügen</label>
+									<module>admin</module>
+									<controller>process</controller>
+									<action>typeAdd</action>
+									<route>default</route>
+								</addType>
+								
+								<editType>
+									<label>Prozesstyp editieren</label>
+									<module>admin</module>
+									<controller>process</controller>
+									<action>typeEdit</action>
+									<route>default</route>
+								</editType>
+							</pages>
+                           
+	                    </processTypes>
+	                    
+	                    <attributeTypes>
+							<label>Attributtypen</label>
+							<module>admin</module>
+							<controller>process</controller>
+							<action>attributeTypes</action>
+                            <route>default</route>
+                            
+                            <pages>
+								<attributeTypeAdd>
+									<label>Attributtyp hinzufügen</label>
+									<module>admin</module>
+									<controller>process</controller>
+									<action>attributeTypeAdd</action>
+									<route>default</route>
+								</attributeTypeAdd>
+								
+								<attributeTypeEdit>
+									<label>Attributtyp bearbeiten</label>
+									<module>admin</module>
+									<controller>process</controller>
+									<action>attributeTypeEdit</action>
+									<route>default</route>
+								</attributeTypeEdit>
+                            </pages>
+                            
+	                    </attributeTypes>
+	                    
+	                </pages>
+                </processSettings>
+            </pages>
+        </configuration>
+
+    </nav>
+</config>

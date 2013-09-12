@@ -1,0 +1,1710 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class App_Db_Tree</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class App_Db_Tree</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Klasse zum Erstellen und Verwalten von Datenbanktabellen, die ein Nested Set abbilden.</p>
+<p class="description"><p>Für die Datenbankabfragen werden mit Zend_Db_Select select Objekte erzeugt. Die Klasse bietet jeweils  Methoden, die die Operationen direkt ausführen und Methoden, die nur ein Select Objekt zurückgibt. Ein  zurückgegebenes Select Objekt kann dann einfach erweitert werden.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> kastners</li>
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_App---Db---Tree.php.html">/App/Db/Tree.php</a> (line <span class="field">12</span>)
+		</p>
+		
+				
+		<pre>Zend_Db_Table_Abstract
+   |
+   --App_Db_Tree</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#DOWN" title="details" class="const-name">DOWN</a> = 					<span class="var-type"> 'down'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#HAVING" title="details" class="const-name">HAVING</a> = 					<span class="var-type"> 'having'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LIMIT" title="details" class="const-name">LIMIT</a> = 					<span class="var-type"> 'limit'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#NODE_ALIAS" title="details" class="const-name">NODE_ALIAS</a> = 					<span class="var-type"> 'node'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#OFFSET" title="details" class="const-name">OFFSET</a> = 					<span class="var-type"> 'offset'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ORDER" title="details" class="const-name">ORDER</a> = 					<span class="var-type"> 'order'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#PARENT_ALIAS" title="details" class="const-name">PARENT_ALIAS</a> = 					<span class="var-type"> 'parent'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#RIGHT" title="details" class="const-name">RIGHT</a> = 					<span class="var-type"> 'right'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ROOT_ALIAS" title="details" class="const-name">ROOT_ALIAS</a> = 					<span class="var-type"> 'root'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#UP" title="details" class="const-name">UP</a> = 					<span class="var-type"> 'up'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#WHERE" title="details" class="const-name">WHERE</a> = 					<span class="var-type"> 'where'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_columns" title="details" class="var-name">$_columns</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_lft" title="details" class="var-name">$_lft</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_parent" title="details" class="var-name">$_parent</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_parentCol" title="details" class="var-name">$_parentCol</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_rgt" title="details" class="var-name">$_rgt</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$_treePrimary" title="details" class="var-name">$_treePrimary</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">unknown_type</span>
+					<a href="#$_upd" title="details" class="var-name">$_upd</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#addOption" title="details" class="method-name">addOption</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$optionType</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$optionValue</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#changeParent" title="details" class="method-name">changeParent</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$node_id</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$parent_id</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$old_parent_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Select</span>
+										<a href="#extendSelect" title="details" class="method-name">extendSelect</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$select</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getBetweenWhereStr" title="details" class="method-name">getBetweenWhereStr</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$lft</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$rgt</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getBreadcrumbs" title="details" class="method-name">getBreadcrumbs</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Select</span>
+										<a href="#getBreadcrumbsSelect" title="details" class="method-name">getBreadcrumbsSelect</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getByLevel" title="details" class="method-name">getByLevel</a>
+											(<span class="var-type">$level</span>&nbsp;<span class="var-name">$level</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Select</span>
+										<a href="#getByLevelSelect" title="details" class="method-name">getByLevelSelect</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$level</span>, [<span class="var-type">options</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getChilds" title="details" class="method-name">getChilds</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Select</span>
+										<a href="#getChildsSelect" title="details" class="method-name">getChildsSelect</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">$options</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">unknown_type</span>
+										<a href="#getColumns" title="details" class="method-name">getColumns</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getDirectDescendants" title="details" class="method-name">getDirectDescendants</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getDirectParent" title="details" class="method-name">getDirectParent</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getIds" title="details" class="method-name">getIds</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$lft</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$rgt</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getLeft" title="details" class="method-name">getLeft</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getNode" title="details" class="method-name">getNode</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getPrimary" title="details" class="method-name">getPrimary</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getRight" title="details" class="method-name">getRight</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getTree" title="details" class="method-name">getTree</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Zend_Db_Select</span>
+										<a href="#getTreeSelect" title="details" class="method-name">getTreeSelect</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getUpdateCol" title="details" class="method-name">getUpdateCol</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#insert" title="details" class="method-name">insert</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$parent</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#moveDown" title="details" class="method-name">moveDown</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#moveNode" title="details" class="method-name">moveNode</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#moveUp" title="details" class="method-name">moveUp</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+										<a href="#setColumns" title="details" class="method-name">setColumns</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$columns</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+										<a href="#setLeft" title="details" class="method-name">setLeft</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$lft</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+										<a href="#setOptions" title="details" class="method-name">setOptions</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">App_Model_Db_Tree</span>
+										<a href="#setPrimary" title="details" class="method-name">setPrimary</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+										<a href="#setRight" title="details" class="method-name">setRight</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$rgt</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+										<a href="#setUpdateCol" title="details" class="method-name">setUpdateCol</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$upd</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_columns" id="$_columns"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_columns</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">77</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array mit Spalten, die standardmäßig aus der Tabelle gelesen werden sollen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_lft" id="$_lft"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_lft</span>
+			 = <span class="var-default"> 'lft'</span>			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Spalte, in der der &quot;left&quot; Wert für das Nested Set gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_parent" id="$_parent"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_parent</span>
+			 = <span class="var-default"> 'parent'</span>			(line <span class="line-number">71</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Index, unter dem die ID des Parents gespeichert wird, wenn ein Datensatz eingetragen oder bearbeitet wird</p>
+<p class="description"><p>(entspricht idR dem Namen des input Feldes, welches vor dem eintragen/bearbeiten abgeschickt wird)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_parentCol" id="$_parentCol"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_parentCol</span>
+			 = <span class="var-default"> 'parent'</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Spalte, in der die ID des Elternelements gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_rgt" id="$_rgt"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_rgt</span>
+			 = <span class="var-default"> 'rgt'</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Spalte, in der der &quot;right&quot; Wert für das Nested Set gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_treePrimary" id="$_treePrimary"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_treePrimary</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speichert den Namen des Primärschlüssels. Heißt treePrimary, da primary schon von Zend_Db_Table_Abstract</p>
+<p class="description"><p>belegt ist</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_upd" id="$_upd"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">unknown_type</span>
+			<span class="var-name">$_upd</span>
+			 = <span class="var-default"> 'updated'</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name der Spalte, in der der temporäre Wert &quot;updated&quot; gespeichert wird (wird für das</p>
+<p class="description"><p>verschieben von Knoten in andere Elternelemente benötigt)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodaddOption" id="addOption"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addOption</span> (line <span class="line-number">872</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fügt dem übergebenen $options array den $optionValue hinzu und gibt den neuen $options array zurück  Wenn für $optionType bereits ein Wert gespeichert ist werden der alte und der neue Wert zu einem  Array zusammengefügt. Ist bereits ein Array gespeichert wird der neue Wert in den Array geschrieben.</p>
+<p class="description"><p>Ist für den $optionType noch kein Wert gespeichert wird ein String an die Stelle geschrieben</p></p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Db_Tree_Exception</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			addOption
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$optionType</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$optionValue</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$optionType</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$optionValue</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodchangeParent" id="changeParent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">changeParent</span> (line <span class="line-number">569</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ändert das Elternelement eines Eintrags</p>
+<p class="description"><p>Alle Unterelemente des zu verschiebenden Eitnrags werden mit verschoben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			changeParent
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$node_id</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$parent_id</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$old_parent_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$node_id</span><span class="var-description">: ID des zu verschiebenden Eintrags</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$parent_id</span><span class="var-description">: ID des neuen Elternelement</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$old_parent_id</span><span class="var-description">: ID des alten Elternelements</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">93</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die Optionen und ruft danach den Konstruktor der Oberklasse (Zend_Db_Table_Abstract) auf</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Zend_Db_Table_Abstract::__construct()</li>
+				<li><span class="field">throws:</span> App_Db_Tree_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodextendSelect" id="extendSelect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">extendSelect</span> (line <span class="line-number">909</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erweitert den übergebenen select um die in Options angegebenen Parameter.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Select</span>
+		<span class="method-name">
+			extendSelect
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$select</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Db_Select</span>
+				<span class="var-name">$select</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBetweenWhereStr" id="getBetweenWhereStr"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBetweenWhereStr</span> (line <span class="line-number">854</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liefert einen String mit der WHERE Bedingung für ein BETWEEN zwischen einem LFT und einem RGT Wert</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBetweenWhereStr
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$lft</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$rgt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$lft</span><span class="var-description">: LEFT Wert</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$rgt</span><span class="var-description">: RIGHT Wert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBreadcrumbs" id="getBreadcrumbs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBreadcrumbs</span> (line <span class="line-number">254</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt einen Array mit dem Pfad zum Eintrag mit der übergebenen ID zurück</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../App/Db/App_Db_Tree.html#methodgetBreadcrumbsSelect">App_Db_Tree::getBreadcrumbsSelect()</a></li>
+				<li><span class="field">throws:</span> App_Db_Tree_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getBreadcrumbs
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBreadcrumbsSelect" id="getBreadcrumbsSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBreadcrumbsSelect</span> (line <span class="line-number">276</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erzeugt den query um den Pfad zum Eintrag mit der übergebenen ID auszulesen</p>
+	<ul class="tags">
+				<li><span class="field">throws:</span> App_Db_Tree_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Select</span>
+		<span class="method-name">
+			getBreadcrumbsSelect
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetByLevel" id="getByLevel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getByLevel</span> (line <span class="line-number">422</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt nur eine Ebene des Baums zurück.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../App/Db/App_Db_Tree.html#methodgetByLevelSelect">App_Db_Tree::getByLevelSelect()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getByLevel
+		</span>
+					(<span class="var-type">$level</span>&nbsp;<span class="var-name">$level</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$level</span>
+				<span class="var-name">$level</span><span class="var-description">: der Level, der zurückgegeben werden soll</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetByLevelSelect" id="getByLevelSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getByLevelSelect</span> (line <span class="line-number">437</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt ein select Objekt zurück, das nur eine Ebene des Baums ausliest</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../App/Db/App_Db_Tree.html#methodgetTreeSelect">App_Db_Tree::getTreeSelect()</a></li>
+				<li><span class="field">throws:</span> App_Db_Tree_Exception</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Select</span>
+		<span class="method-name">
+			getByLevelSelect
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$level</span>, [<span class="var-type">options</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$level</span><span class="var-description">: auszulesende Ebene</span>			</li>
+					<li>
+				<span class="var-type">options</span>
+				<span class="var-name">$options</span><span class="var-description">: weitere Optionen (optional)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetChilds" id="getChilds"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getChilds</span> (line <span class="line-number">314</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest die Unterpunkte zu einer ID aus</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getChilds
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetChildsSelect" id="getChildsSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getChildsSelect</span> (line <span class="line-number">333</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erstellt den Select, um die Unterpunkte zu einer ID auszulesen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Select</span>
+		<span class="method-name">
+			getChildsSelect
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">$options</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">$options</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetColumns" id="getColumns"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getColumns</span> (line <span class="line-number">1087</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Spalten zurück, die zusätzlich zu den standardmäßig ausgelesenen Spalten ausgelesen werden sollen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">unknown_type</span>
+		<span class="method-name">
+			getColumns
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDirectDescendants" id="getDirectDescendants"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getDirectDescendants</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest nur die direkten Nachkommen zu einer ID aus</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDirectDescendants
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDirectParent" id="getDirectParent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getDirectParent</span> (line <span class="line-number">390</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest nur den direkt übergeordneten Eintrag zu einer ID aus</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDirectParent
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIds" id="getIds"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIds</span> (line <span class="line-number">831</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest die IDs zu Nodes aus, die zwischen einem bestimmten lft und rgt Wert liegen.</p>
+<p class="description"><p>Mit den IDs können bei Änderungen an der Baumstruktur Überschneidungen bei den lft und rgt Werten verhindert werden</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array mit den IDs der Datensätze zwischen dem lft und rgt Wert</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getIds
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$lft</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$rgt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$lft</span><span class="var-description">: LEFT Wert</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$rgt</span><span class="var-description">: RIGHT Wert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLeft" id="getLeft"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getLeft</span> (line <span class="line-number">1039</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Spalte mit dem &quot;left&quot; Wert zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLeft
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetNode" id="getNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNode</span> (line <span class="line-number">185</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest einen einzelnen Datensatz anhand seiner ID aus. Im Gegensatz zu Zend_Db_Table_Abstract::find()</p>
+<p class="description"><p>ermittelt getNode() noch den Level und die Anzahl der Kinder vom Datensatz</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getNode
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span><span class="var-description">: id des auszulesenden nodes</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: (optional) weitere optionen für den query</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPrimary" id="getPrimary"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPrimary</span> (line <span class="line-number">1097</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Primärschlüssen zurück. Der bzw die Primärschlüssel werden in von Zend_Db_Table_Abstract</p>
+<p class="description"><p>in einem Array gespeichert (warum auch immer..)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getPrimary
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRight" id="getRight"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRight</span> (line <span class="line-number">1011</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Spalte mit dem &quot;right&quot; Wert zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRight
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTree" id="getTree"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTree</span> (line <span class="line-number">171</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest den Baum aus. Standardmäßig werden nur die in $_columns spezifizierten Felder, lft, rgt</p>
+<p class="description"><p>die Anzahl der Kinder und der Level ausgelesen. Sortiert wird nach lft</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> der Baum in einem eindimensionalen Array</li>
+				<li><span class="field">see:</span> <a href="../../App/Db/App_Db_Tree.html#methodgetTreeSelect">App_Db_Tree::getTreeSelect()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTree
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTreeSelect" id="getTreeSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTreeSelect</span> (line <span class="line-number">215</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erzeugt ein Zend_Db_Select Objekt, mit dem der Baum ausgelesen werden kann. Standardmäßig werden  vom Baum die Felder lft, rgt, primärschlüssel, Anzahl der Kinder und der Level ausgegeben.</p>
+<p class="description"><p>In $options können weitere optionen für den select übergeben werden.  Mögliche Optionen:       columns =&gt; zusätzliche Spalten, die ausgelesen werden sollen (nur Array erlaubt!)       where =&gt; zusätzliche WHERE Klausel. Wird mit AND an die bereits vorhandene angehängt (nur Strings erlaubt!)       having =&gt; eine HAVING Klausel wird erstellt. Nur Strings erlaubt!       order =&gt; standardmäßig wird nur nach dem lft Feld (aufsteigend) sortiert. hier kann ein zweiter                parameter für den ORDER Teil angehängt werden</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Select</span>
+		<span class="method-name">
+			getTreeSelect
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$options</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetUpdateCol" id="getUpdateCol"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUpdateCol</span> (line <span class="line-number">1067</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt den Namen der Spalte, die den temporären Update Wert enthält, zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getUpdateCol
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodinsert" id="insert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert</span> (line <span class="line-number">114</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Speichert die Daten in $data als Unterpunkt von $parent (wird als letztes Unterelement angelegt)</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> insert($data)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$parent</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: einzufügende Daten</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$parent</span><span class="var-description">: ID des Elternelements</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmoveDown" id="moveDown"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">moveDown</span> (line <span class="line-number">464</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bewegt den Datensatz mit der übergebenen ID um eine Position nach unten</p>
+<p class="description"><p>Alle Unterpunkte des Datensatzes werden mit dem Datensatz nach unte verschoben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			moveDown
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des zu verschiebenden Datensatzes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmoveNode" id="moveNode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">moveNode</span> (line <span class="line-number">476</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bewegt den Datensatz mit der übergebenen ID um eine Position nach oben oder nach unten</p>
+<p class="description"><p>Die Richtung wird in $dir übergeben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			moveNode
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des zu verschiebenden Datensatzes</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dir</span><span class="var-description">: Richtung, in die verschoben werden soll (nach oben oder nach unten)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmoveUp" id="moveUp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">moveUp</span> (line <span class="line-number">453</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Bewegt den Datensatz mit der übergebenen ID um eine Position nach oben</p>
+<p class="description"><p>Alle Unterpunkte des Datensatzes werden mit dem Datensatz nach oben verschoben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			moveUp
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$id</span><span class="var-description">: ID des zu verschiebenden Datensatzes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetColumns" id="setColumns"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setColumns</span> (line <span class="line-number">1077</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die Spalten, die zusätzlich zu den standardmäßig ausgelesen Spalten ausgelesen werden</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+		<span class="method-name">
+			setColumns
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$columns</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$columns</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLeft" id="setLeft"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setLeft</span> (line <span class="line-number">1021</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen für die Spalte mit dem &quot;left&quot; Wert</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+		<span class="method-name">
+			setLeft
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$lft</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$lft</span><span class="var-description">: Name der Spalte</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOptions" id="setOptions"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setOptions</span> (line <span class="line-number">800</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt die Optionen</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+		<span class="method-name">
+			setOptions
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPrimary" id="setPrimary"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPrimary</span> (line <span class="line-number">1112</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Primärschlüssel. Wird aus $this-&gt;_primary (von Zend_Db_Table_Abstract) ermittelt.</p>
+<p class="description"><p>Zend_Db_Table_Abstract speichert den Primary (aus welchem Grund auch immer) in einem Array. Es wird  der erste Eintrag aus diesem Array zurückgegeben</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">App_Model_Db_Tree</span>
+		<span class="method-name">
+			setPrimary
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetRight" id="setRight"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRight</span> (line <span class="line-number">993</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen für der Spalte mit dem &quot;right&quot; Wert</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+		<span class="method-name">
+			setRight
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$rgt</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$rgt</span><span class="var-description">: Name der Spalte</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUpdateCol" id="setUpdateCol"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setUpdateCol</span> (line <span class="line-number">1049</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt den Namen für die Spalte, in der der temporäre updated Wert gespeichert wird</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../App/Db/App_Db_Tree.html">App_Db_Tree</a></span>
+		<span class="method-name">
+			setUpdateCol
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$upd</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$upd</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constDOWN" id="DOWN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DOWN</span>
+			 = <span class="const-default"> 'down'</span>
+			(line <span class="line-number">21</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constHAVING" id="HAVING"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">HAVING</span>
+			 = <span class="const-default"> 'having'</span>
+			(line <span class="line-number">15</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLIMIT" id="LIMIT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LIMIT</span>
+			 = <span class="const-default"> 'limit'</span>
+			(line <span class="line-number">17</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constNODE_ALIAS" id="NODE_ALIAS"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">NODE_ALIAS</span>
+			 = <span class="const-default"> 'node'</span>
+			(line <span class="line-number">33</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alias, der in den Queries für die node Tabelle verwendet wird</p>
+	
+	
+</div>
+<a name="constOFFSET" id="OFFSET"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">OFFSET</span>
+			 = <span class="const-default"> 'offset'</span>
+			(line <span class="line-number">18</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constORDER" id="ORDER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ORDER</span>
+			 = <span class="const-default"> 'order'</span>
+			(line <span class="line-number">16</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constPARENT_ALIAS" id="PARENT_ALIAS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PARENT_ALIAS</span>
+			 = <span class="const-default"> 'parent'</span>
+			(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alias, der in den Queries für die parent Tabelle verwendet wird</p>
+	
+	
+</div>
+<a name="constRIGHT" id="RIGHT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RIGHT</span>
+			 = <span class="const-default"> 'right'</span>
+			(line <span class="line-number">19</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constROOT_ALIAS" id="ROOT_ALIAS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ROOT_ALIAS</span>
+			 = <span class="const-default"> 'root'</span>
+			(line <span class="line-number">39</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alias, der in den Queries für die root Tabelle verwendet wird</p>
+	
+	
+</div>
+<a name="constUP" id="UP"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">UP</span>
+			 = <span class="const-default"> 'up'</span>
+			(line <span class="line-number">20</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constWHERE" id="WHERE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WHERE</span>
+			 = <span class="const-default"> 'where'</span>
+			(line <span class="line-number">14</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 21 Nov 2010 20:50:35 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

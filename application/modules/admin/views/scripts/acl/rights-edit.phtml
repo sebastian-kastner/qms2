@@ -1,0 +1,11 @@
+<?php 
+$this->jQuery()->enable();  
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/rightsEdit.js",
+    'text/javascript'
+);
+?>
+
+<h1>Rechte für <?= $this->type; ?> "<?=  $this->name; ?>" Bearbeiten</h1>
+
+<?= $this->form; ?>

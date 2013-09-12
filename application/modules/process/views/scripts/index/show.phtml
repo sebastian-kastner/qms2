@@ -1,0 +1,84 @@
+<?php $this->headTitle('Prozessdarstellung: '.$this->process['notation'].' '.$this->process['name']); ?>
+<?php
+$this->jQuery()->enable(); 
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/ckeditor/ckeditor.js",
+    'text/javascript'
+);
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/ckeditor/adapters/jquery.js",
+    'text/javascript'
+); 
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/modalLayer.js",
+    'text/javascript'
+);
+$this->headScript()->appendFile(
+    $this->baseUrl()."/js/processAttributes.js",
+    'text/javascript'
+);
+?>
+
+<script type="text/javascript">
+$(document).ready(function() 
+{
+    $(".edit_img").click(function() 
+    {
+        showLayer();
+        var attribute_id = $(this).attr('id').match(/\d+/);
+        writeAttributeValue(<?= $this->process['process_id'];?>, attribute_id);
+        return false;
+    });
+    $("#attUpdateForm").submit(function()
+    {
+        saveAttribute(<?= $this->process['process_id']; ?>);
+        hideLayer();
+        return false;
+    }
+    );
+    $("#closeAttForm, #closeButton").click(hideLayer);
+    $("#attValue").ckeditor(
+            function() {}, 
+            { 
+              toolbar      : 'Basic', 
+              enterMode    : CKEDITOR.ENTER_BR,
+              contentsCss  : '<?= $this->baseUrl(); ?>/css/screen.css'
+            }
+    );
+});
+
+</script>
+
+<div id="attFormContainer" style="display: none; position:fixed; min-width:750px; left: 150px; top: 75px; z-index:9999; border: 2px solid #CCCCCC;background-color:#FFFFFF;">
+  <div style="height:20px;background-color:#C33;text-align:right;">
+    <a href="#" id="closeAttForm" style="color:#FFFFFF;font-weight:bold;">Schlie&szlig;en</a>
+  </div>
+  <h2 id="formContainerHead"></h2>
+  <div style="height:100%;color:#000000;">
+    <form action="" method="post" id="attUpdateForm">         
+      <textarea id="attValue" name="content"></textarea>
+      <br/>
+      <input type="checkbox" name="isactive" value="1" id="attIsActive" /> Attribut anzeigen
+      <br/><br/>
+      <input type="submit" name="submit" value="Speichern" id="saveAtt"/>
+      <input type="button" name="cancel" value="Verwerfen" id="closeButton"/>
+    </form>
+  </div>
+</div> 
+
+<h1 id="processName" style="margin-bottom:5px;"><?= $this->process['notation']." ".$this->process['name'] ?></h1>
+<ul class="tabmenu" style="margin-left:0;">
+<?php foreach($this->attribute_types AS $type): ?>
+  <li>
+    <a <?= ($type['selected'] == 1) ? 'class="active"' : ''; ?> href="<?= $this->baseUrl(); ?>/process/<?= $this->process['process_id']; ?>/<?= $type['filtered_name']."/".$type['process_attribute_type_id']; ?>">
+      <?= $type['name']; ?>
+    </a>
+  </li>
+<?php endforeach; ?>
+</ul>
+
+<br/><br/>
+<?php foreach($this->process_attributes AS $attribute): ?>
+  <?= $this->partial("partials/".$attribute['partial'], array('attribute' => $attribute,
+                                                              'process' => $this->process)); ?>
+<?php endforeach; ?>

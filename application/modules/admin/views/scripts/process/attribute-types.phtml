@@ -1,0 +1,36 @@
+<h1>Attributtypen Übersicht</h1>
+
+<div style="text-align:right;width:60%">
+  <a href="<?= $this->baseUrl(); ?>/admin/process/attributeTypeAdd">Neuen Attributtyp erstellen</a>
+</div>
+<table class="table_listing" style="width:60%">
+  <thead>
+  <tr>
+    <td></td>
+    <td>Prozesstyp Bezeichnung</td>
+    <td></td>
+    <td></td>
+  </tr>
+  </thead>
+<tbody>
+<?php foreach($this->attribute_types AS $attribute): ?>
+  <tr>
+    <td>
+      <a href="<?= $this->baseUrl(); ?>/admin/process/attributeTypes/moveUp/<?= $attribute['process_attribute_type_id']; ?>">
+        <img src="<?= $this->baseUrl(); ?>/img/arrow_up.gif" alt="Nach oben verschieben" title="Nach oben verschieben" border="0"/>
+      </a>
+      <a href="<?= $this->baseUrl(); ?>/admin/process/attributeTypes/moveDown/<?= $attribute['process_attribute_type_id']; ?>">
+        <img src="<?= $this->baseUrl(); ?>/img/arrow_down.gif" alt="Nach unten verschieben" title="Nach unten verschieben" border="0"/>
+      </a>
+    </td>
+    <td><?= $attribute['name']; ?></td>
+    <td>
+      <?= $this->editImg(false, 'admin/process/attributeTypeEdit/process_attribute_type_id/'.$attribute['process_attribute_type_id']); ?>  
+    </td>
+    <td>
+      <?= $this->delImg(false, 'admin/process/attributeTypeDel/process_attribute_type_id/'.$attribute['process_attribute_type_id']); ?>  
+    </td>
+  </tr>
+<?php endforeach; ?>
+</tbody>
+</table>

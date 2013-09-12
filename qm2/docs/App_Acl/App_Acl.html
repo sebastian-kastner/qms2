@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class App_Acl</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class App_Acl</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">View Helper zur Anzeige von Links zum Löschen von Datensätzen</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> kastners</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_App---Acl.php.html">/App/Acl.php</a> (line <span class="field">8</span>)
+		</p>
+		
+				
+		<pre>Zend_Acl
+   |
+   --App_Acl</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADD" title="details" class="const-name">ADD</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADMIN" title="details" class="const-name">ADMIN</a> = 					<span class="var-type"> 'admin'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADMIN_PROCESS" title="details" class="const-name">ADMIN_PROCESS</a> = 					<span class="var-type"> 'admin_process'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADMIN_PROCESS_ATTRIBUTES" title="details" class="const-name">ADMIN_PROCESS_ATTRIBUTES</a> = 					<span class="var-type"> 'admin_process_attributes'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ADMIN_PROCESS_PROCESSTYPES" title="details" class="const-name">ADMIN_PROCESS_PROCESSTYPES</a> = 					<span class="var-type"> 'admin_process_processtypes'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DEL" title="details" class="const-name">DEL</a> = 					<span class="var-type"> 4</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#EDIT" title="details" class="const-name">EDIT</a> = 					<span class="var-type"> 3</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#PROCESS" title="details" class="const-name">PROCESS</a> = 					<span class="var-type"> 'process'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#PROCESS_DOCUMENTS" title="details" class="const-name">PROCESS_DOCUMENTS</a> = 					<span class="var-type"> 'process_documents'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#PROCESS_INTERRELATIONS" title="details" class="const-name">PROCESS_INTERRELATIONS</a> = 					<span class="var-type"> 'process_interrelations'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#VIEW" title="details" class="const-name">VIEW</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_resourceList" title="details" class="var-name">$_resourceList</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																												
+												<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#createResourceList" title="details" class="method-name">createResourceList</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$resources</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#createResources" title="details" class="method-name">createResources</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../App_Acl/App_Acl.html">App_Acl</a></span>
+										<a href="#createRole" title="details" class="method-name">createRole</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$role</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../App_Acl/App_Acl.html">App_Acl</a></span>
+										<a href="#createUser" title="details" class="method-name">createUser</a>
+											(<span class="var-type">$user_id</span>&nbsp;<span class="var-name">$user_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getChildren" title="details" class="method-name">getChildren</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$resource_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$children</span> = <span class="var-default">array()</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$resources</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getPrivileges" title="details" class="method-name">getPrivileges</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getResourceList" title="details" class="method-name">getResourceList</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getResources" title="details" class="method-name">getResources</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getRoles" title="details" class="method-name">getRoles</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#isAllowed" title="details" class="method-name">isAllowed</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$role</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$resource</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$privilege</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setResources" title="details" class="method-name">setResources</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$resources</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_resourceList" id="$_resourceList"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_resourceList</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodcreateResourceList" id="createResourceList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createResourceList</span> (line <span class="line-number">103</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erstellt rekursiv die Liste der Resourcen mit einer Level Angabe</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			createResourceList
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$resources</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$resources</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateResources" id="createResources"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createResources</span> (line <span class="line-number">74</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Erstellt die Resourcen für das ACL Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createResources
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcreateRole" id="createRole"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createRole</span> (line <span class="line-number">157</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sucht in der Datenbank nach der angegebenen Rolle und speichert diese mit den Rechten im ACL Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../App_Acl/App_Acl.html">App_Acl</a></span>
+		<span class="method-name">
+			createRole
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$role</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$role</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateUser" id="createUser"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createUser</span> (line <span class="line-number">202</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sucht nach dem angegebenen User und speichert ihn mit all seinen Rechten im ACL Objekt</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../App_Acl/App_Acl.html">App_Acl</a></span>
+		<span class="method-name">
+			createUser
+		</span>
+					(<span class="var-type">$user_id</span>&nbsp;<span class="var-name">$user_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$user_id</span>
+				<span class="var-name">$user_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetChildren" id="getChildren"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getChildren</span> (line <span class="line-number">259</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Liest rekursiv alle Kinderelemente zu einem Elternelement aus</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getChildren
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$resource_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$children</span> = <span class="var-default">array()</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$resources</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$resources</span><span class="var-description">: array mit allen zur Verfügung stehenden Resourcen</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$resource_id</span><span class="var-description">: Das Element, zu dem die Kinderelemente bestimmt werden sollen</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$children</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPrivileges" id="getPrivileges"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPrivileges</span> (line <span class="line-number">213</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Privilegien in einem array zurück (add, edit, delete)</p>
+<p class="description"><p>Keine schöne Lösung, aber da es sich bei den Privilegien um ein statisches Konstrukt handelt sollte diese  Lösung keine Probleme bereiten</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getPrivileges
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResourceList" id="getResourceList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getResourceList</span> (line <span class="line-number">92</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Resourcen als</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getResourceList
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResources" id="getResources"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getResources</span> (line <span class="line-number">235</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> of registered resources</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getResources
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRoles" id="getRoles"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRoles</span> (line <span class="line-number">227</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">return:</span> of registered roles</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRoles
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisAllowed" id="isAllowed"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isAllowed</span> (line <span class="line-number">49</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Überprüft, ob eine $role für die $resource ein $privilege hat.</p>
+<p class="description"><p>Im Gegensatz zu Zend_Acl::isAllowed() dominiert ein allow ein deny in jedem Fall, wenn eine Rolle  von mehreren Rollen erbt.  Bsp: Rolle A erlaubt das Recht XY. Rolle B verbietet das Recht XY. Die Rolle Z erbt von A und B. Ob  Zend_Acl::isAllowed() true oder false zurückgibt hängt von der Reihenfolge ab, in der die Rollen, von denen  geerbt wird angegeben werden.  (Mehr Infos unter Example #1: http://framework.zend.com/manual/1.0/en/zend.acl.introduction.html)  Die erweiterte isAllowed() Methode ignoriert die dortige Reihenfolge und gibt true zurück, wenn  irgendeine der Rollen, von denen geerbt wird, das Recht XY hat. false wird nur dann zurückgegeben, wenn keine  der Rollen, von denen geerbt wird das Recht XY hat.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> isAllowed($role, $resource, $privilege)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isAllowed
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$role</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$resource</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$privilege</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$role</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$resource</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$privilege</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetResources" id="setResources"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setResources</span> (line <span class="line-number">245</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setzt mehrere Resourcen auf einmal. Davor gesetzte Resourcen werden überschrieben</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setResources
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$resources</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$resources</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constADD" id="ADD"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADD</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number">11</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constADMIN" id="ADMIN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADMIN</span>
+			 = <span class="const-default"> 'admin'</span>
+			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constADMIN_PROCESS" id="ADMIN_PROCESS"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADMIN_PROCESS</span>
+			 = <span class="const-default"> 'admin_process'</span>
+			(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constADMIN_PROCESS_ATTRIBUTES" id="ADMIN_PROCESS_ATTRIBUTES"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADMIN_PROCESS_ATTRIBUTES</span>
+			 = <span class="const-default"> 'admin_process_attributes'</span>
+			(line <span class="line-number">32</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constADMIN_PROCESS_PROCESSTYPES" id="ADMIN_PROCESS_PROCESSTYPES"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ADMIN_PROCESS_PROCESSTYPES</span>
+			 = <span class="const-default"> 'admin_process_processtypes'</span>
+			(line <span class="line-number">31</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constDEL" id="DEL"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DEL</span>
+			 = <span class="const-default"> 4</span>
+			(line <span class="line-number">13</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constEDIT" id="EDIT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">EDIT</span>
+			 = <span class="const-default"> 3</span>
+			(line <span class="line-number">12</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constPROCESS" id="PROCESS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PROCESS</span>
+			 = <span class="const-default"> 'process'</span>
+			(line <span class="line-number">25</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Konstanten für die Resourcen</p>
+<p class="description"><p>Damit die Resourcen im Programm verwendet werden können müssen sie noch in der Methode &quot;createResources()&quot;  hinzugefügt werden!  NAMENSKONVENTION!  Die Namen der Resourcen müssen so gewählt werden, dass ein Kinderelement mit dem Namen des Elternelements gefolgt  von einem Underscore beginnt.  Das Elternelement sei: &quot;process&quot;. Ein Kinderelement von &quot;process&quot; sei &quot;interrelations&quot;. Das Kinderelement  müsste demnach &quot;process_interrelations&quot; heißen!</p></p>
+	
+	
+</div>
+<a name="constPROCESS_DOCUMENTS" id="PROCESS_DOCUMENTS"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PROCESS_DOCUMENTS</span>
+			 = <span class="const-default"> 'process_documents'</span>
+			(line <span class="line-number">27</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constPROCESS_INTERRELATIONS" id="PROCESS_INTERRELATIONS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PROCESS_INTERRELATIONS</span>
+			 = <span class="const-default"> 'process_interrelations'</span>
+			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constVIEW" id="VIEW"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">VIEW</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number">10</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 21 Nov 2010 20:50:31 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

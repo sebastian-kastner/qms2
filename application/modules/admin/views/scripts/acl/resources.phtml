@@ -1,0 +1,24 @@
+<h1>Resourcen Übersicht</h1>
+
+<table class="table_listing" width="60%">
+  <thead>
+  <tr>
+    <td style="width:25%;">Resource:</td>
+    <td style="width:55%;">Beschreibung:</td>
+    <td style="width:20%;"></td>
+  </tr>
+  </thead>
+  <tbody>
+<?php
+foreach($this->resources AS $resource) { ?>
+  <tr>
+    <td><?= $resource['resource_name']; ?></td>
+    <td><?= $resource['resource_description']; ?></td>
+    <td>
+      <?= $this->editImg(false, 'admin/acl/resourceEdit/resource_id/'.$resource['resource_id']); ?>
+    </td>
+  </tr>
+<?php } ?>
+  
+  </tbody>
+</table>
